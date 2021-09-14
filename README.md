@@ -1,27 +1,20 @@
-# TiendaISIFrontend
+#### INTEGRANTES:
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.14.
+- Roxana Vargas - 
+- Laura Rebeca Salinas Ruiz - [laura.salinas.r@ucb.edu.bo](https://github.com/lr-salinas)
+- Corina Colque Flores - [corina.colque.f@gmail.com](https://github.com/coriccf)
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### ISI Virtual Shop - PERFIL DE PROYECTO
 
-## Code scaffolding
+El presente proyecto está dirigido a la elaboración de un Sistema de información para la tienda de artesanías “ISI”. El sistema consistirá en una página web
+dedicada a mostrar los productos disponibles de la tienda permitiendo a los que la visitan comprar los mismos de forma directa mediante una pasarela de pagos
+en línea.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# DESCRIPCIÓN DEL OBJETO DE ESTUDIO
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+La tienda de artesanías “ISI” se dedica a la venta minorista de ropa tejida a mano
+para personas de todas las edades.
+La tienda se encuentra ubicada en la ciudad de La Paz donde realizan todas sus
+ventas físicas, además también realizan ventas por internet ofreciendo el servicio
+gratuito de entrega a domicilio u oficina.
