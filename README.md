@@ -1,6 +1,6 @@
 #### INTEGRANTES:
 
-- Roxana Vargas - 
+- Roxana Vargas Telleria - [roxana.vargas.telleria@gmail.com](https://github.com/roxana1908)
 - Laura Rebeca Salinas Ruiz - [laura.salinas.r@ucb.edu.bo](https://github.com/lr-salinas)
 - Corina Colque Flores - [corina.colque.f@gmail.com](https://github.com/coriccf)
 
