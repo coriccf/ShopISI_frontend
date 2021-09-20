@@ -10,9 +10,11 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { SesionComponent } from './components/sesion/sesion.component';
+import { CartComponent } from './components/cart/cart.component';
 
 const routes: Routes = [
   { path: 'sesion', component: SesionComponent  },
+  { path: 'cart', component: CartComponent  },
   { path: '', component: HomeComponent, pathMatch: 'full' },
  
   { path: '**', redirectTo: '/', pathMatch: 'full' },
@@ -26,7 +28,8 @@ const routes: Routes = [
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    SesionComponent
+    SesionComponent,
+    CartComponent
 
   ],
   imports: [
