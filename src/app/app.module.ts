@@ -9,12 +9,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
-import { ContactosComponent } from './components/contactos/contactos.component';
 import { SesionComponent } from './components/sesion/sesion.component';
 
 const routes: Routes = [
-  { path: 'contactos', component: ContactosComponent  },
+  { path: 'sesion', component: SesionComponent  },
   { path: '', component: HomeComponent, pathMatch: 'full' },
+ 
   { path: '**', redirectTo: '/', pathMatch: 'full' },
 
 
@@ -26,7 +26,6 @@ const routes: Routes = [
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    ContactosComponent,
     SesionComponent
 
   ],
