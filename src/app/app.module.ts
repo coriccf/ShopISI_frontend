@@ -22,6 +22,7 @@ const routes: Routes = [
   { path: 'products', component: ProductsComponent  },
   { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'products/form', component: FormProductComponent, pathMatch: 'full' },
+  { path: 'products/form/:id', component: FormProductComponent, pathMatch: 'full' },
   
   { path: '', redirectTo: '/', pathMatch: 'full' },
 
