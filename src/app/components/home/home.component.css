@@ -221,5 +221,129 @@
       margin-top: 30px;
     }
   }
-  
-  
+
+  body {
+    background-color: #f7f6f6
+}
+
+.social-list {
+    display: inline-flex
+}
+
+.social-list li {
+    list-style: none;
+    margin-right: 10px
+}
+
+.maincard {
+    position: relative;
+    width: 120px;
+    height: 80px
+}
+
+.thecard {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease
+}
+
+.thecard:hover {
+    transform: rotateY(180deg)
+}
+
+.thefront {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: hidden;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid #eee;
+    box-shadow: 5px 6px 6px 2px #e9ecef;
+    padding: 4px
+}
+
+.theback {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background-color: hidden;
+    color: #fff;
+    border-radius: 10px;
+    transform: rotateY(180deg);
+    border: 1px solid #eee;
+    box-shadow: 5px 6px 6px 2px #e9ecef;
+    padding: 4px
+}
+
+
+.social-text small {
+  font-size: 20px
+}
+
+@media (max-width:700px) {
+  .social-list {
+      display: block
+  }
+}
+
+.facebook {
+  background: #3b5998
+}
+
+.instagram {
+  background: #3f729b
+}
+
+.youtube {
+  background: #ff0000
+}
+
+.whatsapp {
+  background: #4dc247
+}
+
+.pinterest {
+  background: #cb2027
+}
+
+.social {
+position: fixed; /* Hacemos que la posición en pantalla sea fija para que siempre se muestre en pantalla*/
+left: 0; /* Establecemos la barra en la izquierda */
+top: 200px; /* Bajamos la barra 200px de arriba a abajo */
+z-index: 2000; /* Utilizamos la propiedad z-index para que no se superponga algún otro elemento como sliders, galerías, etc */
+}
+
+.social ul {
+  list-style: none;
+}
+
+.social ul li a {
+  display: inline-block;
+  color:#fff;
+  background: #000;
+  padding: 10px 15px;
+  text-decoration: none;
+  -webkit-transition:all 500ms ease;
+  -o-transition:all 500ms ease;
+  transition:all 500ms ease; /* Establecemos una transición a todas las propiedades */
+}
+
+.social ul li .icon-facebook {background:#3b5998;} /* Establecemos los colores de cada red social, aprovechando su class */
+.social ul li .icon-twitter {background: #4dc247;}
+.social ul li .icon-googleplus {background: #d95232;}
+.social ul li .icon-pinterest {background: #ae181f;}
+.social ul li .icon-mail {background: #666666;}
+
+.social ul li a:hover {
+  background: #000; /* Cambiamos el fondo cuando el usuario pase el mouse */
+  padding: 10px 30px; /* Hacemos mas grande el espacio cuando el usuario pase el mouse */
+}
+
+#contact {
+  margin-top: 50px;
+}
