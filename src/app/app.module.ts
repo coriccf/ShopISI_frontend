@@ -1,7 +1,6 @@
 import { RouterModule, Routes } from '@angular/router';
 
-
-import { NgModule } from '@angular/core';
+import { NgModule, Pipe } from '@angular/core';
 
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -16,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormProductComponent } from './components/products/form-product.component';
 import { FormsModule } from '@angular/forms';
 import { CatalogueComponent } from './components/catalogue/catalogue.component';
+import { FilterPipe } from './pipes/filter.pipe'; 
 
 const routes: Routes = [
   { path: 'sesion', component: SesionComponent  },
@@ -41,7 +41,8 @@ const routes: Routes = [
     CartComponent,
     ProductsComponent,
     FormProductComponent,
-    CatalogueComponent
+    CatalogueComponent,
+    FilterPipe
 
   ],
   imports: [

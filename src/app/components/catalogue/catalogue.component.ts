@@ -11,6 +11,7 @@ import { Product } from './product';
 
 
  export class CatalogueComponent implements OnInit{
+  filterPost='';
 
   product: any[] = [];
 

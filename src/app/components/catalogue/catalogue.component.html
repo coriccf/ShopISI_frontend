@@ -1,9 +1,24 @@
 <section id="portfolio" class="portfolio">
+
   <div class="container" data-aos="fade-up">
+    <div class="col-sm-12 my-1"> 
+  
+  <input class="form-control" id="nombre" type="text" placeholder="Search.." name="filterPost" [(ngModel)]="filterPost">
+  </div>
+
+  
+</div>
+<br>
+<br>
+  <div class="container" data-aos="fade-up">
+
+
+
+    
 
     <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
-        <div class="card" style="width: 18rem;" *ngFor="let product of product" >
+        <div class="card" style="width: 18rem;" *ngFor="let product of product | filter: filterPost " >
           <img src="https://cdn.pixabay.com/photo/2018/01/01/14/21/one-3054263_960_720.jpg"  class="card-img-top" alt="...">
 
           <div class="card-body">

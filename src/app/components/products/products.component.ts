@@ -8,6 +8,7 @@ import { ProductService } from './product.service';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
+  filterPost='';
 
   products!: Product[];
 
