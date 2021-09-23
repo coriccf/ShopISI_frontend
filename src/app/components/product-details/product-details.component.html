@@ -1,0 +1,57 @@
+<div class="col-sm-12 col-md-12 col-lg-12" >
+
+  <div class="product-content product-wrap clearfix product-deatil">
+    <div class="row">
+        <div class="col-md-5 col-sm-12 col-xs-12">
+
+  <div class="card mb-3" style="max-width: 540px;" *ngFor="let product of product" >
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="https://cdn.shopify.com/s/files/1/0028/9597/0349/products/BLUSA8_1024x.jpg" class="img-fluid rounded-start" class="zoom"  alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{product.product_name}}</h5>
+          <p class="card-text">{{product.details}}</p>
+
+          <dl class="">
+          <dt><p class="card-text">Talla:{{product.size}}</p></dt>
+
+          <select id = "inputSize" name="size" ngModel #quantity="ngModel">
+            <option value="1">XS</option>
+            <option value="2">S</option>
+            <option value="3">M</option>
+            <option value="4">L</option>
+            <option value="5">XL</option>
+            <option value="6">XXL/option>
+          </select>
+
+          <dt><p class="card-text">Cantidad:{{product.quantity}}</p></dt>
+
+          <select id = "inputQuantity" name="quantity" ngModel #quantity="ngModel">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </dl>
+
+        <button type="button" class="btn btn-primary" routerLink="/cart"> Agregar al carrito</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+</div>
+

@@ -1,3 +1,18 @@
+.zoom {
+  transition: transform .5s;
+}
+
+.zoom:hover {
+  transform: scale(1.5);
+}
+
+.containerCard{
+  background: #f7f7f7;
+  justify-content: center;
+  align-items: center;
+  position: absolute; left: 180px; top: 300px;
+}
+
 #top {
   margin-top: 45px;
 }
@@ -193,3 +208,60 @@
   }
 }
 
+body {
+  background-color: #f7f6f6
+}
+
+.social-list {
+  display: inline-flex
+}
+
+.social-list li {
+  list-style: none;
+  margin-right: 10px
+}
+
+.maincard {
+  position: relative;
+  width: 120px;
+  height: 80px
+}
+
+.thecard {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 0.8s ease
+}
+
+.thecard:hover {
+  transform: rotateY(180deg)
+}
+
+.thefront {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: hidden;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid #eee;
+  box-shadow: 5px 6px 6px 2px #e9ecef;
+  padding: 4px
+}
+
+.theback {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background-color: hidden;
+  color: #fff;
+  border-radius: 10px;
+  transform: rotateY(180deg);
+  border: 1px solid #eee;
+  box-shadow: 5px 6px 6px 2px #e9ecef;
+  padding: 4px
+}

@@ -15,7 +15,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormProductComponent } from './components/products/form-product.component';
 import { FormsModule } from '@angular/forms';
 import { CatalogueComponent } from './components/catalogue/catalogue.component';
-import { FilterPipe } from './pipes/filter.pipe'; 
+import { FilterPipe } from './pipes/filter.pipe';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
 
 const routes: Routes = [
   { path: 'sesion', component: SesionComponent  },
@@ -25,15 +26,12 @@ const routes: Routes = [
   { path: 'products/form', component: FormProductComponent, pathMatch: 'full' },
   { path: 'products/form/:id', component: FormProductComponent, pathMatch: 'full' },
   { path: 'catalogue', component: CatalogueComponent, pathMatch: 'full' },
-
+  { path: 'product/:id', component: ProductDetailsComponent, pathMatch: 'full'},
   { path: '', redirectTo: '/', pathMatch: 'full' },
-
-
 ];
 
 @NgModule({
   declarations: [
-
     AppComponent,
     NavbarComponent,
     HomeComponent,
@@ -42,7 +40,8 @@ const routes: Routes = [
     ProductsComponent,
     FormProductComponent,
     CatalogueComponent,
-    FilterPipe
+    FilterPipe,
+    ProductDetailsComponent
 
   ],
   imports: [
