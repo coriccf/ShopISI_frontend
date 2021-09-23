@@ -17,6 +17,9 @@ import { FormsModule } from '@angular/forms';
 import { CatalogueComponent } from './components/catalogue/catalogue.component';
 import { FilterPipe } from './pipes/filter.pipe';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { UserAdminComponent } from './components/user/user-admin/user-admin.component';
+import { UserUpdateComponent } from './components/user/user-update/user-update.component';
+
 
 const routes: Routes = [
   { path: 'sesion', component: SesionComponent  },
@@ -27,6 +30,8 @@ const routes: Routes = [
   { path: 'products/form/:id', component: FormProductComponent, pathMatch: 'full' },
   { path: 'catalogue', component: CatalogueComponent, pathMatch: 'full' },
   { path: 'product/:id', component: ProductDetailsComponent, pathMatch: 'full'},
+  { path: 'user-update', component: UserUpdateComponent, pathMatch: 'full'},
+  { path: 'user-admin', component: UserAdminComponent, pathMatch: 'full'},
   { path: '', redirectTo: '/', pathMatch: 'full' },
 ];
 
@@ -41,7 +46,9 @@ const routes: Routes = [
     FormProductComponent,
     CatalogueComponent,
     FilterPipe,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    UserAdminComponent,
+    UserUpdateComponent
 
   ],
   imports: [
