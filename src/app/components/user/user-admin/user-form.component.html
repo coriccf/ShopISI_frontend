@@ -9,29 +9,52 @@
 
     <form class="row g-3 needs-validation" novalidate>
 
+
+
+
       <div class="col-md-6 position-relative"><br><br>
-        <label for="validationTooltip01" class="form-label">Nombres</label>
-        <input type="text" class="form-control" id="validationTooltip01" value="Mark" required>
-        <div class="valid-tooltip">
-          Please choose a valid name.
-        </div>
+
+        <label for="inputFirstname">Nombre</label>
+        <input type="text" class="form-control" id="inputFirstname" name="firstname" ngModel #firstname="ngModel"
+        [class.is-invalid]="firstname.invalid && firstname.touched"
+        minlength="1"
+        pattern=".*\S+.*"
+        required >
+        <small class="form-text text-danger" *ngIf="firstname.invalid && firstname.touched">El campo es obligatorio</small>
+
       </div>
+
+
+
+
       <div class="col-md-6 position-relative"><br><br>
-        <label for="validationTooltip02" class="form-label">Apellidos</label>
-        <input type="text" class="form-control" id="validationTooltip02" value="Otto" required>
-        <div class="valid-tooltip">
-          Please choose a valid lastname.
-        </div>
+
+        
+          <label for="inputLastname">Apellido</label>
+          <input type="text" class="form-control" id="inputLastname" name="lastname" ngModel #lastname="ngModel"
+          [class.is-invalid]="lastname.invalid && lastname.touched"
+          minlength="1"
+          pattern=".*\S+.*"
+          required >
+          <small class="form-text text-danger" *ngIf="lastname.invalid && lastname.touched">El campo es obligatorio</small>
+
       </div>
+
+
       <div class="col-md-6 position-relative">
-        <label for="validationTooltipUsername" class="form-label">Correo</label>
-        <div class="input-group has-validation">
-         <input type="text" class="form-control" id="validationTooltipUsername" aria-describedby="validationTooltipUsernamePrepend" required>
-          <div class="invalid-tooltip">
-            Please choose a valid email.
-          </div>
-        </div>
+
+        <label for="inputEmail">Email</label>
+        <input type="email" class="form-control" id="inputEmail" name="email" ngModel #email="ngModel"
+        [class.is-invalid]="email.invalid && email.touched"
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,8}$"
+        minlength="1"
+        required >
+    <small class="form-text text-danger" *ngIf="email.invalid && email.touched">Ingrese un correo valido</small> 
+
+      
       </div>
+
+
       <div class="col-md-6 position-relative">
         <label for="inputTag">Rol</label>
         <select id="inputTag" class="form-control" name="name_rol" ngModel required #name_rol="ngModel">
@@ -41,26 +64,36 @@
         </select>
     </div>
 
+
+
+
       <div class="col-md-6 position-relative">
-        <label for="validationTooltip03" class="form-label">Nombre de Usuario</label>
-        <input type="text" class="form-control" id="validationTooltip03" required>
-        <div class="invalid-tooltip">
-          Please provide a valide username.
-        </div>
+
+
+        <label for="inputFirstname">Nombre de usuario</label>
+        <input type="text" class="form-control" id="inputFirstname" name="firstname" ngModel #firstname="ngModel"
+        [class.is-invalid]="firstname.invalid && firstname.touched"
+        minlength="1"
+        pattern=".*\S+.*"
+        required >
+    <small class="form-text text-danger" *ngIf="firstname.invalid && firstname.touched">El campo es obligatorio</small>
+      
       </div>
 
-      <div class="form-row animated fadeIn fast">
+
+
       <div class="col-md-6 position-relative">
-        <label for="inputPassword4" class="form-control">Contraseña</label>
-        <input type="password" class="form-control" id="inputPassword4" name="password" ngModel #password="ngModel"
-        [class.is-invalid]="password.invalid && password.touched"
-        minlength = "8"
-        pattern = "(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
-        <small class="form-text text-danger" *ngIf="password.invalid && password.touched">
-          La contraseña debe tener al menos 8 caracteres, un numero y una letra mayuscula
-        </small>
+        <label for="inputPassword4">Contraseña</label>
+                  <input type="password" class="form-control" id="inputPassword4" name="password" ngModel #password="ngModel"
+                  [class.is-invalid]="password.invalid && password.touched"
+                  minlength="10"
+                  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}"
+                  required >
+                  <small class="form-text text-danger" *ngIf="password.invalid && password.touched">Debe tener un minimo de 10 caracteres, un numero y una mayuscula </small>
+
+      
       </div>
-    </div>
+
 
       <div class="col-12" class="text-center">
         <button class="btn btn-primary" type="submit">Crear usuario</button>
