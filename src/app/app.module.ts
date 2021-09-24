@@ -20,6 +20,7 @@ import { ProductDetailsComponent } from './components/product-details/product-de
 import { UserAdminComponent } from './components/user/user-admin/user-admin.component';
 import { UserUpdateComponent } from './components/user/user-update/user-update.component';
 import { UserFormComponent } from './components/user/user-admin/user-form.component';
+import { ListClientsComponent } from './components/list-clients/list-clients.component';
 
 
 const routes: Routes = [
@@ -34,6 +35,7 @@ const routes: Routes = [
   { path: 'user-update', component: UserUpdateComponent, pathMatch: 'full'},
   { path: 'user-admin', component: UserAdminComponent, pathMatch: 'full'},
   { path: 'user-admin/user-form', component: UserFormComponent, pathMatch: 'full'},
+  { path: 'list-clients', component: ListClientsComponent, pathMatch: 'full'},
   { path: '', redirectTo: '/', pathMatch: 'full' },
 ];
 
@@ -51,7 +53,8 @@ const routes: Routes = [
     ProductDetailsComponent,
     UserAdminComponent,
     UserUpdateComponent,
-    UserFormComponent
+    UserFormComponent,
+    ListClientsComponent
 
 
 
