@@ -1,1 +1,40 @@
-<p>user-admin works!</p>
+<div class="container-sm">
+
+  <div class="card" style="width: 60rem;">
+    <div class="card-body">
+
+      <div class="position-absolute start-50 translate-middle">
+        <h5 class="card-title"><b>Lista de usuarios</b></h5>
+      </div>
+
+
+      <table class="table table-sm">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Rol</th>
+            <th scope="col">Usuario</th>
+            <th scope="col">Contraseña</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="">
+            <th scope="row">  </th>
+            <td>  2  </td>
+            <td>  2</td>
+            <td>  1 </td>
+          </tr>
+
+
+        </tbody>
+      </table>
+    </div>
+    </div>
+
+    <div class="position-absolute top-50 start-50">
+      <button class="btn btn-dark" type="button" [routerLink]="['/user/form']">Nuevo usuario</button>
+    </div>
+</div>
