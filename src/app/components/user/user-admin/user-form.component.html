@@ -15,12 +15,12 @@
       <div class="col-md-6 position-relative"><br><br>
 
         <label for="inputFirstname">Nombre</label>
-        <input type="text" class="form-control" id="inputFirstname" name="firstname" ngModel #firstname="ngModel"
-        [class.is-invalid]="firstname.invalid && firstname.touched"
+        <input type="text" class="form-control" id="inputName" name="name" ngModel #name="ngModel"
+        [class.is-invalid]="name.invalid && name.touched"
         minlength="1"
         pattern=".*\S+.*"
         required >
-        <small class="form-text text-danger" *ngIf="firstname.invalid && firstname.touched">El campo es obligatorio</small>
+        <small class="form-text text-danger" *ngIf="name.invalid && name.touched">El campo es obligatorio</small>
 
       </div>
 
@@ -29,7 +29,7 @@
 
       <div class="col-md-6 position-relative"><br><br>
 
-        
+
           <label for="inputLastname">Apellido</label>
           <input type="text" class="form-control" id="inputLastname" name="lastname" ngModel #lastname="ngModel"
           [class.is-invalid]="lastname.invalid && lastname.touched"
@@ -49,19 +49,22 @@
         pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,8}$"
         minlength="1"
         required >
-    <small class="form-text text-danger" *ngIf="email.invalid && email.touched">Ingrese un correo valido</small> 
+    <small class="form-text text-danger" *ngIf="email.invalid && email.touched">Ingrese un correo valido</small>
 
-      
+
       </div>
 
 
       <div class="col-md-6 position-relative">
-        <label for="inputTag">Rol</label>
-        <select id="inputTag" class="form-control" name="name_rol" ngModel required #name_rol="ngModel">
-            <option selected value="1">Administrador</option>
-            <option selected value="2">Gerente</option>
-            <option selected value="3">Ventas</option>
-        </select>
+        <label for="inputRol">Rol</label>
+        <input type="rol" class="form-control" id="inputRol" name="rol" ngModel #rol="ngModel"
+        [class.is-invalid]="rol.invalid && rol.touched"
+        minlength="2"
+        pattern=".*\S+.*"
+        required >
+        <small class="form-text text-danger" *ngIf="rol.invalid && rol.touched">El campo es obligatorio</small>
+
+
     </div>
 
 
@@ -71,13 +74,13 @@
 
 
         <label for="inputFirstname">Nombre de usuario</label>
-        <input type="text" class="form-control" id="inputFirstname" name="firstname" ngModel #firstname="ngModel"
-        [class.is-invalid]="firstname.invalid && firstname.touched"
+        <input type="text" class="form-control" id="inputUsername" name="username" ngModel #username="ngModel"
+        [class.is-invalid]="username.invalid && username.touched"
         minlength="1"
         pattern=".*\S+.*"
         required >
-    <small class="form-text text-danger" *ngIf="firstname.invalid && firstname.touched">El campo es obligatorio</small>
-      
+    <small class="form-text text-danger" *ngIf="username.invalid && username.touched">El campo es obligatorio</small>
+
       </div>
 
 
@@ -90,13 +93,15 @@
                   pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}"
                   required >
                   <small class="form-text text-danger" *ngIf="password.invalid && password.touched">Debe tener un minimo de 10 caracteres, un numero y una mayuscula </small>
-
-      
       </div>
 
 
       <div class="col-12" class="text-center">
-        <button class="btn btn-primary" type="submit">Crear usuario</button>
+        <button class="btn btn-primary" role="button" (click)='create()' *ngIf="!user.user_id else elseBlock">Crear usuario</button>
+
+        <ng-template #elseBlock>
+          <button class="btn btn-success" role="button" (click)='update()'>Actualizar</button>
+      </ng-template>
       </div>
     </form>
 

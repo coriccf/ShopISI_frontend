@@ -11,16 +11,16 @@
 
       <div class="col-md-6 position-relative"><br><br>
         <label for="inputFirstname">Nombre</label>
-        <input type="text" class="form-control" id="inputFirstname" name="firstname" ngModel #firstname="ngModel"
-        [class.is-invalid]="firstname.invalid && firstname.touched"
+        <input type="text" class="form-control" id="inputName" name="name" ngModel #name="ngModel"
+        [class.is-invalid]="name.invalid && name.touched"
         minlength="1"
         pattern=".*\S+.*"
         required >
-        <small class="form-text text-danger" *ngIf="firstname.invalid && firstname.touched">El campo es obligatorio</small>
+        <small class="form-text text-danger" *ngIf="name.invalid && name.touched">El campo es obligatorio</small>
       </div>
 
       <div class="col-md-6 position-relative"><br><br>
-        
+
           <label for="inputLastname">Apellido</label>
           <input type="text" class="form-control" id="inputLastname" name="lastname" ngModel #lastname="ngModel"
           [class.is-invalid]="lastname.invalid && lastname.touched"
@@ -28,7 +28,7 @@
           pattern=".*\S+.*"
           required >
           <small class="form-text text-danger" *ngIf="lastname.invalid && lastname.touched">El campo es obligatorio</small>
-     
+
       </div>
 
       <div class="form-row animated fadeIn fast">
@@ -39,28 +39,28 @@
             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,8}$"
             minlength="1"
             required >
-        <small class="form-text text-danger" *ngIf="email.invalid && email.touched">Ingrese un correo valido</small> 
+        <small class="form-text text-danger" *ngIf="email.invalid && email.touched">Ingrese un correo valido</small>
         </div>
-      
+
     </div>
       <div class="col-md-6 position-relative">
         <label for="inputPhone">Celular</label>
-        <input type="text" class="form-control" id="inputPhone" name="phone" ngModel #phone="ngModel"
-        [class.is-invalid]="phone.invalid && phone.touched"
+        <input type="text" class="form-control" id="inputCellphone" name="cellphone" ngModel #cellphone="ngModel"
+        [class.is-invalid]="cellphone.invalid && cellphone.touched"
         minlength="6"
         pattern="^\+?\d{6,}"
         required >
-    <small class="form-text text-danger" *ngIf="phone.invalid && phone.touched">campo obligatorio o el campo esta incorrecto</small>
+    <small class="form-text text-danger" *ngIf="cellphone.invalid && cellphone.touched">campo obligatorio o el campo esta incorrecto</small>
       </div>
       <div class="col-md-6 position-relative">
 
         <label for="inputPhone">Telefono</label>
-                    <input type="text" class="form-control" id="inputPhone" name="phone" ngModel #phone="ngModel"
-                    [class.is-invalid]="phone.invalid && phone.touched"
+                    <input type="text" class="form-control" id="inputTelephone" name="telephone" ngModel #telephone="ngModel"
+                    [class.is-invalid]="telephone.invalid && telephone.touched"
                     minlength="6"
                     pattern="^\+?\d{6,}"
                     required >
-                <small class="form-text text-danger" *ngIf="phone.invalid && phone.touched">campo obligatorio o el campo esta incorrecto</small>
+                <small class="form-text text-danger" *ngIf="telephone.invalid && telephone.touched">campo obligatorio o el campo esta incorrecto</small>
       </div>
 
       <div class="col-12" class="text-center">

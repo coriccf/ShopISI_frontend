@@ -21,11 +21,13 @@
         </thead>
 
         <tbody>
-          <tr *ngFor="">
-            <th scope="row">  </th>
-            <td>  2  </td>
-            <td>  2</td>
-            <td>  1 </td>
+          <tr *ngFor="let user of user">
+            <th scope="row">{{user.user_id}}</th>
+            <td>{{user.name}}</td>
+            <td>{{user.lastname}}</td>
+            <td>{{user.rol}}</td>
+            <td>{{user.username}}</td>
+            <td>{{user.password}}</td>
           </tr>
 
 

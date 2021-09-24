@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from './user';
+import { UserService } from './user.service';
 
 @Component({
   selector: 'app-user-admin',
@@ -6,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-admin.component.css']
 })
 export class UserAdminComponent implements OnInit {
+  filterPost='';
 
-  constructor() { }
+  user!: User[];
+
+  constructor(private userService: UserService) { }
 
   ngOnInit(): void {
+    this.userService.getAll().subscribe(
+      u => this.user=u
+    );
   }
 
 }
