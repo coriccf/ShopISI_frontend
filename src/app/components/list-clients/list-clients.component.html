@@ -12,18 +12,24 @@
           <thead>
             <tr>
               <th scope="col">#</th>
-              <th scope="col">Nombre</th>
+              <th scope="col">Usuario</th>
               <th scope="col">Correo</th>
 
             </tr>
           </thead>
 
           <tbody>
-
+            <tr *ngFor="let user of user">
+              <th scope="row">{{user.user_id}}</th>
+            
+              <td>{{user.username}}</td>
+              <td>{{user.email}}</td>
+           
+            </tr>
+  
+  
           </tbody>
         </table>
       </div>
       </div>
-
-
   </div>
