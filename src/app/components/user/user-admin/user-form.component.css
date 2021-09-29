@@ -32,3 +32,8 @@
 .btn-space {
   margin-right: 5px;
 }
+#btnEdit,
+#btnDelete{
+    display: inline-block;
+    vertical-align: top;
+}

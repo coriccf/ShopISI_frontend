@@ -20,4 +20,13 @@ export class UserAdminComponent implements OnInit {
     );
   }
 
+  delete(user:User):void{
+    console.log("Delete");
+    this.userService.delete(user.user_id).subscribe(
+      res=>this.userService.getAll().subscribe(
+        response=> this.user=response
+      )
+    );
+  }
+
 }

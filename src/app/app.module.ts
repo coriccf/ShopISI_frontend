@@ -35,6 +35,7 @@ const routes: Routes = [
   { path: 'user-update', component: UserUpdateComponent, pathMatch: 'full'},
   { path: 'user-admin', component: UserAdminComponent, pathMatch: 'full'},
   { path: 'user-admin/user-form', component: UserFormComponent, pathMatch: 'full'},
+  { path: 'user-admin/user-form/:id', component: FormProductComponent, pathMatch: 'full' },
   { path: 'list-clients', component: ListClientsComponent, pathMatch: 'full'},
   { path: '', redirectTo: '/', pathMatch: 'full' },
 ];
