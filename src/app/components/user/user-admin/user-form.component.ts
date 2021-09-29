@@ -10,14 +10,14 @@ import { UserService } from "./user.service";
 })
 export class UserFormComponent implements OnInit{
   user_id: number=0;
-  name: string ="";
-  lastname: string="";
-  email: string="";
-  cellphone: string="";
-  telephone: string="";
-  username: string="";
-  password:string="";
-  rol:string="";
+  name: string ='';
+  lastname: string='';
+  email: string='';
+  cellphone: string='';
+  telephone: string='';
+  username: string='';
+  password:string='';
+  rol:string='';
   status: number=0;
 
 user:User=new User(this.user_id, this.name,this.lastname,this.email,this.cellphone,this.telephone,this.username,this.password,this.rol,this.status);

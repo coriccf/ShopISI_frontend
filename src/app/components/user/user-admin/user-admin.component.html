@@ -1,10 +1,14 @@
 <div class="container-sm">
 
+  <div class="position top-50 start-50">
+    <button class="btn btn-dark" type="button" [routerLink]="['/user-admin/user-form']">Nuevo usuario</button>
+  </div>
+
   <div class="card" style="width: 60rem;">
     <div class="card-body">
 
       <div class="position-absolute start-50 translate-middle">
-        <h5 class="card-title"><b>Lista de usuarios</b></h5>
+        <h1 class="card-title"><b>Lista de usuarios</b></h1>
       </div>
 
 
@@ -29,14 +33,9 @@
             <td>{{user.username}}</td>
             <td>{{user.password}}</td>
           </tr>
-
-
         </tbody>
+
       </table>
     </div>
-    </div>
-
-    <div class="position-absolute top-50 start-50">
-      <button class="btn btn-dark" type="button" [routerLink]="['/user-admin/user-form']">Nuevo usuario</button>
     </div>
 </div>
