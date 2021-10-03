@@ -21,6 +21,7 @@ import { UserAdminComponent } from './components/user/user-admin/user-admin.comp
 import { UserUpdateComponent } from './components/user/user-update/user-update.component';
 import { UserFormComponent } from './components/user/user-admin/user-form.component';
 import { ListClientsComponent } from './components/list-clients/list-clients.component';
+import { UserViewComponent } from './components/user-view/user-view.component';
 
 
 const routes: Routes = [
@@ -55,7 +56,8 @@ const routes: Routes = [
     UserAdminComponent,
     UserUpdateComponent,
     UserFormComponent,
-    ListClientsComponent
+    ListClientsComponent,
+    UserViewComponent
 
 
 
