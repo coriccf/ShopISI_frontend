@@ -21,7 +21,8 @@ import { UserAdminComponent } from './components/user/user-admin/user-admin.comp
 import { UserUpdateComponent } from './components/user/user-update/user-update.component';
 import { UserFormComponent } from './components/user/user-admin/user-form.component';
 import { ListClientsComponent } from './components/list-clients/list-clients.component';
-import { UserViewComponent } from './components/user-view/user-view.component';
+import { ProfileViewComponent } from './components/profile-view/profile-view.component';
+
 
 
 const routes: Routes = [
@@ -38,6 +39,7 @@ const routes: Routes = [
   { path: 'user-admin/user-form', component: UserFormComponent, pathMatch: 'full'},
   { path: 'user-admin/user-form/:id', component: FormProductComponent, pathMatch: 'full' },
   { path: 'list-clients', component: ListClientsComponent, pathMatch: 'full'},
+  { path: 'profile-view', component: ProfileViewComponent, pathMatch: 'full'},
   { path: '', redirectTo: '/', pathMatch: 'full' },
 ];
 
@@ -57,7 +59,8 @@ const routes: Routes = [
     UserUpdateComponent,
     UserFormComponent,
     ListClientsComponent,
-    UserViewComponent
+    ProfileViewComponent,
+   
 
 
 
