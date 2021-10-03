@@ -39,7 +39,7 @@ const routes: Routes = [
   { path: 'user-admin/user-form', component: UserFormComponent, pathMatch: 'full'},
   { path: 'user-admin/user-form/:id', component: FormProductComponent, pathMatch: 'full' },
   { path: 'list-clients', component: ListClientsComponent, pathMatch: 'full'},
-  { path: 'profile-view', component: ProfileViewComponent, pathMatch: 'full'},
+  { path: 'profile-view/:id', component: ProfileViewComponent, pathMatch: 'full'},
   { path: '', redirectTo: '/', pathMatch: 'full' },
 ];
 

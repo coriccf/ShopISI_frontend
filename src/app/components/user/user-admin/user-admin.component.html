@@ -38,6 +38,8 @@
             <div>
               <button type="button" name="btnEdit" class="btn btn-primary" [routerLink]="['/user-admin/form', user.user_id]">Editar</button>
              <button  name="btnDelete" class="btn btn-danger" (click)="delete(user)">Eliminar</button>
+             <button type="button" name ="btnView" class="btn btn-info" [routerLink]="['/profile-view', user.user_id]" >view</button>
+             
             </div>
             </td>
           </tr>

@@ -2,15 +2,15 @@
 {
   text-align: center;
   height: 300px;
-  height: 350px;
+  height: 370px;
   padding: 12px;
   background: url(../../../assets/img/m1.jpeg) ;
 }
 .avatar
 {
-  width: 200px;
-  height: 200px;
-  border-radius: 60%;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
 }
 .edit {
   background-color: #5cda9b;
