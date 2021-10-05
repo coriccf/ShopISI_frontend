@@ -36,11 +36,14 @@ const routes: Routes = [
   { path: 'catalogue', component: CatalogueComponent, pathMatch: 'full' },
   { path: 'product/:id', component: ProductDetailsComponent, pathMatch: 'full'},
   { path: 'user-update', component: UserUpdateComponent, pathMatch: 'full'},
+  { path: 'user-update/:id', component: UserUpdateComponent, pathMatch: 'full'},
   { path: 'user-admin', component: UserAdminComponent, pathMatch: 'full'},
   { path: 'user-admin/user-form', component: UserFormComponent, pathMatch: 'full'},
   { path: 'user-admin/user-form/:id', component: FormProductComponent, pathMatch: 'full' },
   { path: 'list-clients', component: ListClientsComponent, pathMatch: 'full'},
   { path: 'profile-view/:id', component: ProfileViewComponent, pathMatch: 'full'},
+  { path: 'user-admin-update', component: UserAdminUpdateComponent, pathMatch: 'full'},
+  { path: 'user-admin-update/:id', component: UserAdminUpdateComponent, pathMatch: 'full'},
   { path: '', redirectTo: '/', pathMatch: 'full' },
 ];
 
@@ -62,7 +65,7 @@ const routes: Routes = [
     ListClientsComponent,
     ProfileViewComponent,
     UserAdminUpdateComponent,
-   
+
 
 
 

@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { User } from './user';
 import { UserService } from './user.service';
@@ -8,7 +9,7 @@ import { UserService } from './user.service';
   styleUrls: ['./user-admin.component.css']
 })
 export class UserAdminComponent implements OnInit {
-  filterPost='';
+ filterPost='';
 
   user!: User[];
 
@@ -25,6 +26,15 @@ export class UserAdminComponent implements OnInit {
     this.userService.delete(user.user_id).subscribe(
       res=>this.userService.getAll().subscribe(
         response=> this.user=response
+      )
+    );
+  }
+
+  update(user:User){
+    console.log("Update");
+    this.userService.update(user).subscribe(
+      res=>this.userService.getAll().subscribe(
+        response=>this.user=response
       )
     );
   }

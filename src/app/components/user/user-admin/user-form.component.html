@@ -100,11 +100,11 @@
       <div class="col-md-6 " class="text-center well">
         <div class="position top-50 start-50">
 
-          <button class="btn btn-dark btn btn-space" type="button" [routerLink]="['/user-admin']">Atrás</button>
+          <button class="btn btn-dark" style="margin: 10px" type="button" [routerLink]="['/user-admin']">Atrás</button>
 
-          <button class="btn btn-primary btn btn-space btn btn-success" role="button" (click)='create()'*ngIf="!user.user_id else elseBlock">Crear usuario</button>
+          <button class="btn btn-success" style="margin: 10px" type="submit" role="button" (click)='create()'*ngIf="!user.user_id else elseBlock">Crear usuario</button>
           <ng-template #elseBlock>
-            <button class="btn btn-success" role="button" (click)='update()'>Actualizar</button>
+            <button class="btn btn-success" style="margin: 10px" type="submit" role="button" (click)='update()'>Actualizar</button>
           </ng-template>
 
 

@@ -4,7 +4,7 @@
     <div class="card-body">
 
       <div class="position-absolute start-50 translate-middle">
-        <h1 class="card-title"><b>Registrar usuarios</b></h1>
+        <h1 class="card-title"><b>Editar Usuario</b></h1>
       </div>
 
     <form  class="row g-3 needs-validation" novalidate  >
@@ -101,7 +101,11 @@
         <div class="position top-50 start-50">
 
           <button class="btn btn-dark btn btn-space" type="button" [routerLink]="['/user-admin']">Atrás</button>
-          <button class="btn btn-dark btn btn-space" type="button" [routerLink]="['/user-admin']">Actualizar</button>
+
+          <button class="btn btn-dark btn btn-space" type="submit" style="margin: 10px" role="button" (click)='create()'*ngIf="!user.user_id else elseBlock">Crear usuario</button>
+          <ng-template #elseBlock>
+            <button class="btn btn-dark btn btn-space" type="submit" style="margin: 10px" role="button" (click)='update()'>Actualizar</button>
+          </ng-template>
 
         </div>
       </div>
