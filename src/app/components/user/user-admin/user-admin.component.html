@@ -36,10 +36,10 @@
             <td>{{user.password}}</td>
            <td>
             <div>
-              <button type="button" name="btnEdit" class="btn btn-primary" [routerLink]="['/user-admin/form', user.user_id]">Editar</button>
-             <button  name="btnDelete" class="btn btn-danger" (click)="delete(user)">Eliminar</button>
-             <button type="button" name ="btnView" class="btn btn-info" [routerLink]="['/profile-view', user.user_id]" >view</button>
-             
+             <button class="btn btn-success" style="margin: 10px" type="btnEdit" [routerLink]="['/user-admin-update', user.user_id]">Editar</button>
+             <button  name="btnDelete" style="margin: 10px"  class="btn btn-danger" (click)="delete(user)">Eliminar</button>
+             <button type="button"style="margin: 10px" name ="btnView" class="btn btn-info" [routerLink]="['/profile-view', user.user_id]" >Ver Perfil</button>
+
             </div>
             </td>
           </tr>

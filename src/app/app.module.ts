@@ -22,6 +22,7 @@ import { UserUpdateComponent } from './components/user/user-update/user-update.c
 import { UserFormComponent } from './components/user/user-admin/user-form.component';
 import { ListClientsComponent } from './components/list-clients/list-clients.component';
 import { ProfileViewComponent } from './components/profile-view/profile-view.component';
+import { UserAdminUpdateComponent } from './components/user/user-admin-update/user-admin-update.component';
 
 
 
@@ -60,6 +61,7 @@ const routes: Routes = [
     UserFormComponent,
     ListClientsComponent,
     ProfileViewComponent,
+    UserAdminUpdateComponent,
    
 
 
