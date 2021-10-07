@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from "@angular/router";
-import { User } from "./user";
-import { UserService } from "./user.service";
+import { Client } from "./client";
+import { ClientService } from "./client.service";
 
 @Component({
   selector: 'app-list-clients',
@@ -12,13 +12,13 @@ export class ListClientsComponent implements OnInit {
 
   filterPost='';
 
-  user!: User[];
+  client!: Client[];
 
-  constructor(private userService: UserService) { }
+  constructor(private clientService: ClientService) { }
 
   ngOnInit(): void {
-    this.userService.getAll().subscribe(
-      u => this.user=u
+    this.clientService.getAll().subscribe(
+      u => this.client=u
     );
   }
 

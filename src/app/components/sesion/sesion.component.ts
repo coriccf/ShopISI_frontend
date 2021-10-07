@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from "@angular/router";
-import { User } from "./user";
-import { UserService } from "./user.service";
+import { Client } from "./client";
+import { ClientService } from "./client.service";
 @Component({
   selector: 'app-sesion',
   templateUrl: './sesion.component.html',
@@ -9,20 +9,20 @@ import { UserService } from "./user.service";
 })
 export class SesionComponent implements OnInit {
 
-    user_id: number=0;
+    client_id: number=0;
     name: string ="";
     lastname: string="";
     email: string="";
     cellphone: string="";
     telephone: string="";
-    username: string="";
+    address: string="";
+    clientname: string="";
     password:string="";
-    rol:string="";
-    status: number=0;
+    
   
-  user:User=new User(this.user_id, this.name,this.lastname,this.email,this.cellphone,this.telephone,this.username,this.password,this.rol,this.status);
+  client:Client=new Client(this.client_id, this.name,this.lastname,this.email,this.cellphone,this.telephone,this.address,this.clientname,this.password);
   
-    constructor(private userService:UserService, private router:Router, private activatedRoute:ActivatedRoute ) { }
+    constructor(private clientService:ClientService, private router:Router, private activatedRoute:ActivatedRoute ) { }
   
     ngOnInit(): void {
       this.cargar();
@@ -33,8 +33,8 @@ export class SesionComponent implements OnInit {
         e=>{
           let id=e['id'];
               if(id){
-                this.userService.get(id).subscribe(
-                  es=> this.user=es
+                this.clientService.get(id).subscribe(
+                  es=> this.client=es
                 );
               }
         }
@@ -42,15 +42,15 @@ export class SesionComponent implements OnInit {
     }
   
     create():void{
-      console.log(this.user);
-      this.userService.create(this.user).subscribe(
-        res=> this.router.navigate(['/user'])
+      console.log(this.client);
+      this.clientService.create(this.client).subscribe(
+        res=> this.router.navigate(['/client'])
       );
     }
   
     update():void{
-      this.userService.update(this.user).subscribe(
-        e=>this.router.navigate(['/user'])
+      this.clientService.update(this.client).subscribe(
+        e=>this.router.navigate(['/client'])
       );
     }
   

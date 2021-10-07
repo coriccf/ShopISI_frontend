@@ -9,27 +9,27 @@
   
         <div class="form-group animated fadeIn fast">
           <div class="form-group col-md-6">
-          <label for="inputusername">Nombre de usuario</label>
+          <label for="inputclientname">Nombre de usuario</label>
          
-            <input type="text" class="form-control" name="username" [(ngModel)]="user.username" >
+            <input type="text" class="form-control" name="username" [(ngModel)]="client.username" >
        
       </div>
     </div>
 
     <div class="form-group animated fadeIn fast">
       <div class="form-group col-md-6">
-      <label for="inputusername">Nombre</label>
+      <label for="inputclientname">Nombre</label>
      
-        <input type="text" class="form-control" name="name" [(ngModel)]="user.name" >
+        <input type="text" class="form-control" name="name" [(ngModel)]="client.name" >
    
   </div>
 </div>
 
 <div class="form-group animated fadeIn fast">
   <div class="form-group col-md-6">
-  <label for="inputusername">Apellido</label>
+  <label for="inputclientname">Apellido</label>
  
-    <input type="text" class="form-control" name="lastname" [(ngModel)]="user.lastname" >
+    <input type="text" class="form-control" name="lastname" [(ngModel)]="client.lastname" >
 
 </div>
 </div>
@@ -37,30 +37,24 @@
 
 <div class="form-group animated fadeIn fast">
   <div class="form-group col-md-6">
-  <label for="inputusername">Ingresa tu correo</label>
+  <label for="inputclientname">Ingresa tu correo</label>
  
-    <input type="email" class="form-control" name="email" [(ngModel)]="user.email" >
+    <input type="email" class="form-control" name="email" [(ngModel)]="client.email" >
 
 </div>
 </div>
 
 <div class="form-group animated fadeIn fast">
   <div class="form-group col-md-6">
-  <label for="inputusername">Ingresa Contraseña</label>
+  <label for="inputclientname">Ingresa Contraseña</label>
  
-    <input type="password" class="form-control" name="password" [(ngModel)]="user.password" >
+    <input type="password" class="form-control" name="password" [(ngModel)]="client.password" >
 
 </div>
 </div>
 
-
-
- 
-
-          
-  
           <div class="col-12" class="text-center">
-            <button class="btn btn-primary" role="button" (click)='create()' *ngIf="!user.user_id ">Crear usuario</button>
+            <button class="btn btn-primary" role="button" (click)='create()' *ngIf="!client.client_id ">Registrarse</button>
           </div>
     </form>
     <br>

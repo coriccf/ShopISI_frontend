@@ -1,27 +1,27 @@
-export class User{
-    user_id: number=0;
+export class Client{
+    client_id: number=0;
     name: string ="";
     lastname: string="";
     email: string="";
     cellphone: string="";
     telephone: string="";
+    address:string="";
     username: string="";
     password:string="";
-    rol:string="";
-    status: number= 0;
   
-    constructor(user_id:number, name:string,lastname:string,email:string,cellphone:string,telephone:string, username:string,password:string,
-      rol:string,status:number){
-      this.user_id=user_id;
+  
+    constructor(client_id:number, name:string,lastname:string,email:string,cellphone:string,telephone:string, address:string, username:string,password:string,
+     ){
+      this.client_id=client_id;
       this.name=name;
       this.lastname=lastname;
       this.email=email;
       this.cellphone=cellphone;
       this.telephone=telephone;
+      this.address=address;
       this.username=username;
       this.password=password;
-      this.rol=rol;
-      this.status=status;
+      
     }
   }
   

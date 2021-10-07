@@ -9,24 +9,35 @@ import { UserService } from "./user.service";
   styleUrls: ['./profile-view.component.css']
 })
 export class ProfileViewComponent implements OnInit {
-  user: any[] =[];
-  
-  constructor(private userService: UserService, private activatedRoute:ActivatedRoute) { }
+ 
+ filterPost='';
+
+  user!: User[];
+
+  constructor(private userService: UserService) { }
 
   ngOnInit(): void {
-    this.cargar();
+    this.userService.getAll().subscribe(
+      u => this.user=u
+    );
   }
-      cargar():void{
-        this.activatedRoute.params.subscribe(
-          e=>{
-            let id=e['id'];
-            if(id){
-              this.userService.get(id).subscribe(
-                //es=> this.user=es
-              );
-            }
-          }
-        )
-      }
+
+  delete(user:User):void{
+    console.log("Delete");
+    this.userService.delete(user.user_id).subscribe(
+      res=>this.userService.getAll().subscribe(
+        response=> this.user=response
+      )
+    );
+  }
+
+  update(user:User){
+    console.log("Update");
+    this.userService.update(user).subscribe(
+      res=>this.userService.getAll().subscribe(
+        response=>this.user=response
+      )
+    );
+  }
 
 }
