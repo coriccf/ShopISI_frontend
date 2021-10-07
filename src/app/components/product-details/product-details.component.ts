@@ -1,6 +1,6 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Product } from './product';
 import { ProductService } from './product.service';
 
 @Component({
@@ -10,27 +10,47 @@ import { ProductService } from './product.service';
 })
 export class ProductDetailsComponent implements OnInit {
 
-  product: any[] = [];
-  product_id: any[] = [];
+ /* filterPost='';
+    product!: Product[];*/
+
+  product_id: number=0;
+  product_name: string= "";
+  details: string="";
+  size: string="";
+  stock: number=0;
+  color: number=0;
+  quantity:number=0;
+  costProduct:number=0;
+  status: number= 0;
+
+  product:Product= new Product(this.product_id,this.product_name, this.details, this.size,this.stock, this.color,this.quantity, this.costProduct, this.status);
 
 
-  constructor(private http: HttpClient, private activatedRoute: ActivatedRoute) {
-    this.activatedRoute.params.subscribe(params =>{
-      this.product_id = [parseInt(params['product_id'])]
-      console.log(params['product_id']);
-      console.log(this.product_id)
-    })
+  constructor(private productService:ProductService, private router:Router, private activatedRoute:ActivatedRoute) { }
 
-    this.http.get('http://localhost:8081/producto/details/' + this.product_id)
-    .subscribe((data: any) => {
-      this.product = data;
-      console.log(this.product[0]);
-    })
+/*  ngOnInit(): void {
+    this.productService.getAll().subscribe(
+      p => this.product=p
+    );
+  }*/
 
-   }
 
   ngOnInit(): void {
-
+    this.cargar();
   }
+      cargar():void{
+        this.activatedRoute.params.subscribe(
+          e=>{
+            let id=e['id'];
+            if(id){
+              this.productService.get(id).subscribe(
+                es=> this.product=es
+              );
+            }
+          }
+        )
+      }
+
+
 
 }

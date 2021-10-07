@@ -39,4 +39,14 @@ export class UserAdminComponent implements OnInit {
     );
   }
 
+  create(user: User){
+    console.log("Create");
+    this.userService.create(user).subscribe(
+      res=>this.userService.getAll().subscribe(
+        response=>this.user=response
+      )
+    );
+
+  }
+
 }

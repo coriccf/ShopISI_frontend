@@ -22,4 +22,20 @@ export class ProductService {
     return this.http.get<Product>(this.url+'/'+id);
   }
 
+  // ACTUALIZAR UN PRODUCTO
+  update(product:Product):Observable<Product>{
+    return this.http.put<Product>(this.url, product);
+  }
+
+  // ELIMINAR UN PRODUCTO
+  delete(id:number):Observable<Product>{
+    return this.http.delete<Product>(this.url+'/'+id);
+  }
+
+  // CREAR UN PRODUCTO
+  create(product:Product):Observable<Product>{
+    return this.http.post<Product>(this.url, product);
+  }
+
+
 }
