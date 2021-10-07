@@ -26,6 +26,7 @@ import { ListClientsComponent } from './components/list-clients/list-clients.com
 import { ProfileViewComponent } from './components/profile-view/profile-view.component';
 import { UserAdminUpdateComponent } from './components/user/user-admin-update/user-admin-update.component';
 import { OrderComponent } from './order/order.component';
+import { ProfileClientComponent } from './components/profile-client/profile-client.component';
 
 
 
@@ -56,6 +57,7 @@ const routes: Routes = [
   { path: 'order',component: OrderComponent, pathMatch:'full'},
   { path: 'order/:id', component: OrderComponent, pathMatch: 'full'},
   { path: 'cart/:id', component: OrderComponent, pathMatch: 'full'},
+  { path: 'profile-client/:id', component: ProfileClientComponent, pathMatch: 'full'},
 
   { path: '', redirectTo: '/', pathMatch: 'full' },
 ];
@@ -81,6 +83,7 @@ const routes: Routes = [
     CategoriasComponent,
     FormCategoriaComponent,
     OrderComponent,
+    ProfileClientComponent,
 
 
 

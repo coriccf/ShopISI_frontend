@@ -30,9 +30,8 @@
             
              <td>
               <div>
-               <button class="btn btn-success" style="margin: 10px" type="btnEdit" >Editar</button>
-               
-               <button type="button"style="margin: 10px" name ="btnView" class="btn btn-info"  >Ver Perfil</button>
+            
+                <button type="button"style="margin: 10px" name ="btnView" class="btn btn-info" [routerLink]="['/profile-client', client.client_id]" >Ver Perfil</button>
   
               </div>
               </td>

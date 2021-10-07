@@ -1,0 +1,31 @@
+.header
+{
+  text-align: center;
+  height: 300px;
+  height: 370px;
+  padding: 12px;
+  background: url(../../../assets/img/m1.jpeg) ;
+}
+.avatar
+{
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
+.edit {
+  background-color: #5cda9b;
+  border-color: #5cda9b;
+}
+.editfont {
+  color: white;
+}
+
+.orderfont {
+  color: black;
+}
+#top{
+  margin-top: 50px;
+}
+#main-body{
+ color: aqua;
+}
