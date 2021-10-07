@@ -4,16 +4,18 @@
       <div class="card-body">
 
         <div class="position-absolute start-50 translate-middle">
-          <h5 class="card-title"><b>Lista de clientes</b></h5>
+          <h2 class="card-title"><b>Lista de clientes</b></h2>
         </div>
 
 
         <table class="table table-sm">
-          <thead>
+          <thead  class="thead-dark">
             <tr>
               <th scope="col">#</th>
               <th scope="col">Usuario</th>
+              <th scope="col">Nombre</th>
               <th scope="col">Correo</th>
+              <th scope="col">Acciones</th>
 
             </tr>
           </thead>
@@ -23,12 +25,20 @@
               <th scope="row">{{client.client_id}}</th>
             
               <td>{{client.username}}</td>
+              <td>{{client.name}}</td>
               <td>{{client.email}}</td>
-           
+            
+             <td>
+              <div>
+               <button class="btn btn-success" style="margin: 10px" type="btnEdit" >Editar</button>
+               
+               <button type="button"style="margin: 10px" name ="btnView" class="btn btn-info"  >Ver Perfil</button>
+  
+              </div>
+              </td>
             </tr>
-  
-  
           </tbody>
+  
         </table>
       </div>
       </div>
