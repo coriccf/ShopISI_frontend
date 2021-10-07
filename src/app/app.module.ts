@@ -11,6 +11,8 @@ import { HomeComponent } from './components/home/home.component';
 import { SesionComponent } from './components/sesion/sesion.component';
 import { CartComponent } from './components/cart/cart.component';
 import { ProductsComponent } from './components/products/products.component';
+import { CategoriasComponent } from './components/categorias/categorias.component';
+import { FormCategoriaComponent } from './components/categorias/form-categoria.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormProductComponent } from './components/products/form-product.component';
 import { FormsModule } from '@angular/forms';
@@ -47,6 +49,10 @@ const routes: Routes = [
   { path: 'profile-view/:id', component: ProfileViewComponent, pathMatch: 'full'},
   { path: 'user-admin-update', component: UserAdminUpdateComponent, pathMatch: 'full'},
   { path: 'user-admin-update/:id', component: UserAdminUpdateComponent, pathMatch: 'full'},
+  { path: 'categorias', component: CategoriasComponent  },
+  { path: 'categorias/form', component: FormCategoriaComponent, pathMatch: 'full' },
+  { path: 'categorias/form/:id', component: FormCategoriaComponent, pathMatch: 'full' },
+
   { path: '', redirectTo: '/', pathMatch: 'full' },
 ];
 
@@ -68,6 +74,8 @@ const routes: Routes = [
     ListClientsComponent,
     ProfileViewComponent,
     UserAdminUpdateComponent,
+    CategoriasComponent,
+    FormCategoriaComponent,
 
 
 

@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http'
+import {HttpClient} from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Product } from './product';
+
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +10,7 @@ import { Product } from './product';
 export class ProductService {
 
   private url:string="http://localhost:8081/producto";
+
 
   constructor(private http:HttpClient) { }
 
@@ -37,5 +39,9 @@ export class ProductService {
     return this.http.delete<Product>(this.url+'/'+id);
   }
 
-
+  upload(file:File):Observable<any>{
+    const formData=new FormData();
+    formData.append('files',file);
+    return  this.http.post<any>(this.url+`/upload`,formData);
+  }
 }

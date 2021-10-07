@@ -11,9 +11,11 @@
         <th scope="col">Talla</th>
         <th scope="col">Color</th>
         <th scope="col">Costo</th>
-        <th scope="col">Status</th>
+        <th scope="col">Stock</th>
+        <th scope="col">Categoria</th>
         <th scope="col">        </th>
         <th scope="col">        </th>
+        
         
       </tr>
     </thead>
@@ -25,10 +27,16 @@
         <td>{{product.size}}</td>
         <td>{{product.color}}</td>
         <td>{{product.costProduct}}</td>
-        <td>{{product.status}}</td>
+        <td>{{product.stock}}</td>
+        <td>{{product.categoria_categoria_id}}</td>
+
         <td> <button type="button" name="button" class="btn btn-primary" [routerLink]="['/products/form', product.product_id]">Editar</button> </td>
         <td> <button class="btn btn-danger" (click)="delete(product)">Eliminar</button> </td>
       </tr>
+
+
+
+
       
     </tbody>
   </table>

@@ -1,0 +1,47 @@
+<div class="container-sm">
+  <div class="col-sm-12 my-1">
+
+<button class="btn btn-info" type="button" [routerLink]="['/categorias/form']">NUEVO</button>
+  </div>
+  <table class="table">
+   
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre Categoria</th>
+        <th scope="col">Status</th>
+        <th scope="col">        </th>
+        <th scope="col">        </th>
+        <th scope="col">        </th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let categoria of categorias">
+        <th scope="row">{{categoria.categoria_id}}</th>
+        <td>{{categoria.nombre}}</td>
+        <td>{{categoria.status}}</td>
+        <td> <button type="button" name="button" class="btn btn-primary" [routerLink]="['/categorias/form', categoria.categoria_id]">Editar</button> </td>
+        
+        <td> <button class="btn btn-danger" (click)="delete(categoria)">Eliminar</button> </td>
+
+        <td><button class ="btn btn-success" (click)= "categoria.status = !categoria.status">
+          {{categoria.status ? 'Deshabilitar' : '  Habilitar  '}}
+
+        </button></td>
+        <div *ngif = "categoria.status; else CasoFalso">
+          Caso Verdadero
+        </div>
+        <!-- <ng-template #CasoVerdadero>
+          Caso Verdadero
+        </ng-template>
+         -->
+        <ng-template #CasoFalso>
+          Caso Falso
+        </ng-template>
+         
+      </tr>
+      
+    </tbody>
+  </table>
+</div>

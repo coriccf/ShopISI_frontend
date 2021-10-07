@@ -28,6 +28,7 @@ export class ProductsComponent implements OnInit {
         response=> this.products=response
       )
     );
+  
   }
 
 }
