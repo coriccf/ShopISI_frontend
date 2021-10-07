@@ -25,6 +25,7 @@ import { UserFormComponent } from './components/user/user-admin/user-form.compon
 import { ListClientsComponent } from './components/list-clients/list-clients.component';
 import { ProfileViewComponent } from './components/profile-view/profile-view.component';
 import { UserAdminUpdateComponent } from './components/user/user-admin-update/user-admin-update.component';
+import { OrderComponent } from './order/order.component';
 
 
 
@@ -52,6 +53,9 @@ const routes: Routes = [
   { path: 'categorias', component: CategoriasComponent  },
   { path: 'categorias/form', component: FormCategoriaComponent, pathMatch: 'full' },
   { path: 'categorias/form/:id', component: FormCategoriaComponent, pathMatch: 'full' },
+  { path: 'order',component: OrderComponent, pathMatch:'full'},
+  { path: 'order/:id', component: OrderComponent, pathMatch: 'full'},
+  { path: 'cart/:id', component: OrderComponent, pathMatch: 'full'},
 
   { path: '', redirectTo: '/', pathMatch: 'full' },
 ];
@@ -76,6 +80,7 @@ const routes: Routes = [
     UserAdminUpdateComponent,
     CategoriasComponent,
     FormCategoriaComponent,
+    OrderComponent,
 
 
 

@@ -1,0 +1,82 @@
+<div class="container-sm">
+
+  <button type="button" class="btn btn-light" [routerLink]="['/product-details']">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+    </svg>
+  </button>
+
+  <div class="col-sm-12 col-md-12 col-lg-12" style="margin: 10px;" >
+    <div class="clearfix product-deatil">
+      <div class="row">
+          <div class="col-md-10 col-sm-12 col-xs-12">
+
+            <div class="card mb-3" name="cardStyle">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="https://cdn.shopify.com/s/files/1/0028/9597/0349/products/BLUSA8_1024x.jpg" class="img-fluid rounded-start zoom" alt="..." >
+                </div>
+                <div class="col-md-8" style="left:120px">
+                  <div class="card-body">
+                      <h1 class="card-title" style="margin: 10px; margin-bottom: 60px;">Nombre del producto</h1>
+                      <h5 class="card-text" style="margin: 10px">Detalles</h5>
+                      <h5 class="card-text" style="margin: 10px">Costo    Bs.</h5>
+
+
+                    <form>
+                      <div class="form-row">
+                      <div class="col-auto">
+                        <dl style="margin: 10px">
+                          <dt><h5 class="card-text" >Talla
+                            <select id = "inputSize" name="size" style="margin: 10px" ngModel #quantity="ngModel">
+                              <option selected>M</option>
+                              <option value="1">XS</option>
+                              <option value="2">S</option>
+                              <option value="3">M</option>
+                              <option value="4">L</option>
+                              <option value="5">XL</option>
+                              <option value="6">XXL</option>
+                            </select>
+                          </h5></dt>
+                        </dl>
+                      </div>
+
+                      <div class="col-auto">
+                        <dl>
+                          <dt><h5 class="card-text">Cantidad
+                            <select id = "inputSize" name="size" style="margin: 10px" ngModel #quantity="ngModel">
+                              <option selected>1</option>
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                            </select>
+                          </h5></dt>
+                        </dl>
+                      </div>
+                      </div>
+
+
+                      <div class="form-inline" style="margin: 10px">
+                        <h5 for="card-text">Color</h5>
+                        <input type="text" class="form-control" id="color" required  style="margin: 10px">
+                      </div>
+
+
+
+                        <div class="col-12" class="text-center" >
+                          <button class="btn btn-primary" type="submit">Pedir producto</button>
+                        </div>
+
+                      </form>
+
+                      </div>
+                    </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

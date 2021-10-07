@@ -1,0 +1,41 @@
+.btn.btn-primary{
+  margin-top: 85px;
+  margin-bottom: 25px;
+
+}
+.card-title{
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+
+.col-md-6 position-relative{
+  margin-top: 20px;
+
+}
+
+body{
+  margin-top:20px;
+  background:#eee;
+}
+.cardStyle{
+max-width: 450px;
+max-height: 550px;
+}
+
+.container-sm{
+  margin-top: 90px;
+  margin-left: 150px;
+}
+#top {
+  margin-top: 45px;
+}
+
+.zoom {
+  transition: transform .5s;
+}
+
+.zoom:hover {
+  transform: scale(1.5);
+}
+
