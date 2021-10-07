@@ -10,34 +10,43 @@ import { UserService } from "./user.service";
 })
 export class ProfileViewComponent implements OnInit {
  
- filterPost='';
+  user_id: number=0;
+  name: string ="";
+  lastname: string="";
+  email: string="";
+  cellphone: string="";
+  telephone: string="";
+  username: string="";
+  password:string="";
+  rol:string="";
+  status: number=0;
 
-  user!: User[];
+user:User=new User(this.user_id, this.name,this.lastname,this.email,this.cellphone,this.telephone,this.username,this.password,this.rol,this.status);
 
-  constructor(private userService: UserService) { }
+
+  constructor(private userService:UserService, private router:Router, private activatedRoute:ActivatedRoute) { }
+
+/*  ngOnInit(): void {
+    this.productService.getAll().subscribe(
+      p => this.product=p
+    );
+  }*/
+
 
   ngOnInit(): void {
-    this.userService.getAll().subscribe(
-      u => this.user=u
-    );
+    this.cargar();
   }
-
-  delete(user:User):void{
-    console.log("Delete");
-    this.userService.delete(user.user_id).subscribe(
-      res=>this.userService.getAll().subscribe(
-        response=> this.user=response
-      )
-    );
-  }
-
-  update(user:User){
-    console.log("Update");
-    this.userService.update(user).subscribe(
-      res=>this.userService.getAll().subscribe(
-        response=>this.user=response
-      )
-    );
-  }
+      cargar():void{
+        this.activatedRoute.params.subscribe(
+          e=>{
+            let id=e['id'];
+            if(id){
+              this.userService.get(id).subscribe(
+                es=> this.user=es
+              );
+            }
+          }
+        )
+      }
 
 }
