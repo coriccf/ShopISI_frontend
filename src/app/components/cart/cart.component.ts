@@ -48,6 +48,18 @@ export class CartComponent implements OnInit {
     );
 
   }
+  /*
+   update():void{
+    this.productService.update(this.product).subscribe(
+      e=> this.router.navigate(['/products'])
+    );
+  }
+  create():void{
+    console.log(this.product);
+    this.productService.create(this.product).subscribe(
+      res=> this.router.navigate(['/products'])
+    );
+}*/
 
 }
 

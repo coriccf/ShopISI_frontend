@@ -10,9 +10,6 @@ import { ProductService } from './product.service';
 })
 export class ProductDetailsComponent implements OnInit {
 
- /* filterPost='';
-    product!: Product[];*/
-
   product_id: number=0;
   product_name: string= "";
   details: string="";
@@ -27,13 +24,6 @@ export class ProductDetailsComponent implements OnInit {
 
 
   constructor(private productService:ProductService, private router:Router, private activatedRoute:ActivatedRoute) { }
-
-/*  ngOnInit(): void {
-    this.productService.getAll().subscribe(
-      p => this.product=p
-    );
-  }*/
-
 
   ngOnInit(): void {
     this.cargar();
@@ -53,10 +43,10 @@ export class ProductDetailsComponent implements OnInit {
 
       update():void{
         this.productService.update(this.product).subscribe(
-          e=> this.router.navigate(['/product'])
+          e=> this.router.navigate(['/cart'])
         );
       }
-      create():void{
+     create():void{
         console.log(this.product);
         this.productService.create(this.product).subscribe(
           res=> this.router.navigate(['/product'])
