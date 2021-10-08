@@ -36,7 +36,6 @@ export class ProductService {
 
   // ELIMINAR UN PRODUCTO
   delete(id:number):Observable<Product>{
-    window.alert("No se puede elminar por que la categoria esta siendo usada");
     return this.http.delete<Product>(this.url+'/'+id);
     
   }

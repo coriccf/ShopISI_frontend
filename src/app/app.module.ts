@@ -31,6 +31,7 @@ import { OrderComponent } from './order/order.component';
 import { ProfileClientComponent } from './components/profile-client/profile-client.component';
 import { Ng5SliderModule } from 'ng5-slider';
 import { ClientEditComponent } from './components/client-edit/client-edit.component';
+import { ConfirmationPopoverModule} from 'angular-confirmation-popover';
 
 
 const routes: Routes = [
@@ -67,6 +68,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
+  
   declarations: [
     AppComponent,
     NavbarComponent,
@@ -97,6 +99,9 @@ const routes: Routes = [
 
   ],
   imports: [
+    ConfirmationPopoverModule.forRoot({
+      confirmButtonType:'danger' // set defaults here
+      }),
     BrowserModule,
     RouterModule.forRoot(routes),
     AppRoutingModule,
@@ -107,7 +112,8 @@ const routes: Routes = [
 
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+
   
 })
 export class AppModule { }

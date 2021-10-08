@@ -17,6 +17,9 @@ export class ProductsComponent implements OnInit {
   products!: Product[];
   categoria: Array<Categoria>=[];
 
+  public popoverTitle:string = 'Mensaje de confirmacion';
+  public popoverMessage: string= 'Esta seguro que desea eliminar el producto?';
+
 
   constructor(private productService:ProductService, private categoriaService:CategoriaService) { }
   ngOnInit(): void {

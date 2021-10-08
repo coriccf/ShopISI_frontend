@@ -39,19 +39,17 @@
         <td>
           <div>
            <button class="btn btn-success" style="margin: 10px" type="btnEdit" [routerLink]="['/products/form', product.product_id]">Editar</button>
-           <button  name="btnDelete" style="margin: 10px"  class="btn btn-danger" (click)="delete(product)">Eliminar</button>
-      
+           <button  name="btnDelete" style="margin: 10px"  class="btn btn-danger"
+           mwlConfirmationPopover
+           [popoverTitle]="popoverTitle"
+           [popoverMessage]="popoverMessage"
+           placement= "left"
+           (confirm)="delete(product)"
+           (cancel)= "cancelClicked = true">Eliminar</button>
+
           </div>
           </td>
-
-
-
-
-      </tr>
-
-
-
-      
+      </tr>  
     </tbody>
   </table>
 </div>

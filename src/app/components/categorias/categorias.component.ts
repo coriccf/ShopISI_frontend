@@ -11,6 +11,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class CategoriasComponent implements OnInit {
   buttonDisabled: boolean = false;
+  public popoverTitle:string = 'Mensaje de confirmacion';
+  public popoverMessage: string= 'Esta seguro que desea eliminar el producto?';
 
   filterPost='';
   categoria_id: number=0;
@@ -29,12 +31,15 @@ export class CategoriasComponent implements OnInit {
     );
   }
   delete(categoria:Categoria):void{
-    console.log("Delege");
+ 
     this.categoriaService.delete(categoria.categoria_id).subscribe(
+     
       res=>{
          this.categoriaService.getAll().subscribe(
-        response=> {
+    
+          response=> {
           this.categorias=response}, 
+          
           
       )}, err=> window.alert("No se puede elminar por que la categoria esta siendo usada")
     );

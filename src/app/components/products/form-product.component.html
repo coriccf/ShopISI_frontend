@@ -11,7 +11,7 @@
 
                 <div class="col-md-12 position-relative">
                     <label for ="product_name">Producto</label>
-                    <input type="text" class="form-control" name="product_name" [(ngModel)]="product.product_name" >
+                    <input type="text" class="form-control" name="product_name" [(ngModel)]="product.product_name" ngModel required >
                 </div>
 
                 <div class="col-md-12 position-relative">
@@ -43,17 +43,17 @@
 
                 <div class="col-md-6 position-relative">
                     <label for ="color">Color</label>
-                    <input type="text" class="form-control" name="color" [(ngModel)]="product.color" >
+                    <input type="number" class="form-control" name="color" [(ngModel)]="product.color" >
                 </div>
 
                 <div class="col-md-6 position-relative">
                     <label for ="costProduct" >Precio</label>
-                    <input type="text" class="form-control" name="costProduct" [(ngModel)]="product.costProduct" >
+                    <input type="decimal" class="form-control" name="costProduct" [(ngModel)]="product.costProduct" >
                 </div>
 
                 <div class="col-md-6 position-relative">
                     <label for ="status" >Stock</label>
-                    <input type="text" class="form-control" name="stock" [(ngModel)]="product.stock" >
+                    <input type="number" class="form-control" name="stock" [(ngModel)]="product.stock" >
                 </div>
            
                   
