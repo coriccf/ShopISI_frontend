@@ -39,11 +39,20 @@
       <div class="col md 8" style="width: 18rem;" *ngFor="let product of product | filter: filterPost " >
         <div class="card">
           <img src="https://cdn.pixabay.com/photo/2018/01/01/14/21/one-3054263_960_720.jpg"  class="card-img-top" class="zoom"   alt="...">
-            <div class="card-body">
-              <a class="card-link"style="font-size: 17px; color: black;" [routerLink]="['../product-details',product.product_id]">{{product.product_name}}</a>
-              <p class="card-text">{{product.details}}</p>
-              <p class="card-text">Bs. {{product.costProduct}}</p>
+
+                 <div class="card-body">
+            <a class="card-link"style="font-size: 17px; color: black;" [routerLink]="['../product-details',product.product_id]">{{product.product_name}}</a>
+            <p class="card-text">{{product.details}}</p>
+            <p class="card-text">Bs. {{product.costProduct}}</p>
+
+            <div class="card" *ngIf="product.stock>0" >
+              <p class ="card-text" style="color:#3FC037  ">PRODUCTO DISPONIBLE</p>
             </div>
+            <div class="card" *ngIf="product.stock==0" >
+              <p class ="card-text" style="color:#F32C1B">PRODUCTO AGOTADO </p>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
