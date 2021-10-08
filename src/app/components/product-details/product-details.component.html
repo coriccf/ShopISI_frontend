@@ -25,25 +25,29 @@
           <h5 class="card-text" style="margin: 10px">Bs. {{product.costProduct}}</h5>
 
 
-          <dl class="" style="margin: 10px">
-            <dt><h5 class="card-text" for ="size">Talla
+          <form   class="row g-3 needs-validation" novalidate >
+            <dl class="" style="margin: 10px">
+              <dt><h5 class="card-text" for ="size">Talla
 
-              <select id = "inputSize" name="size" style="margin: 10px" [(ngModel)]="product.size">
-                <option selected>XXS</option>
-                <option value="1">XS</option>
-                <option value="2">S</option>
-                <option value="3">M</option>
-                <option value="4">L</option>
-                <option value="5">XL</option>
-                <option value="6">XXL</option>
-              </select>
-            </h5></dt>
-          </dl>
+                <select id = "inputSize" name="size" style="margin: 10px" [(ngModel)]="product.size">
+                  <option selected>XXS</option>
+                  <option value="1">XS</option>
+                  <option value="2">S</option>
+                  <option value="3">M</option>
+                  <option value="4">L</option>
+                  <option value="5">XL</option>
+                  <option value="6">XXL</option>
+                </select>
+              </h5></dt>
+            </dl>
 
-          <div class="form-inline" style="margin: 10px">
-            <h5 for ="quantity" >Cantidad</h5>
-            <input style="margin: 10px" type="text" class="form-control" name="quantity" [(ngModel)]="product.quantity" >
-        </div>
+            <div class="form-inline" style="margin: 10px">
+              <h5 for ="quantity" >Cantidad</h5>
+              <input style="margin: 10px" type="text" class="form-control" name="quantity" [(ngModel)]="product.quantity" >
+          </div>
+
+        </form>
+
 
         </div>
 
