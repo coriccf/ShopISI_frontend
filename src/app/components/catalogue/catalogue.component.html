@@ -1,42 +1,48 @@
 <div class="container" data-aos="fade-up">
+
+ <!-- FILTRO POR CATEGORIA         -->
   
-  <div class="col-sm-12 my-1">
-    <div class="card" style="width: 60rem;">
-      <div class="card-body">
+ <div class="col-sm-12 my-1">
+  <div class="card" style="width: 60rem;">
+    <div class="card-body">
         <dl class="" style="margin: 20px">
           <dt><p class="card-text">Escoge una Categoria
-            <select id = "inputSize" name="categoria" style="margin: 10px" ngModel #quantity="ngModel">
-              <option selected>Todos</option>
-              <option *ngFor = "let cat of categoria" value="1">{{cat.nombre}}</option>
-           
-            </select>
+              <select id = "inputSize" name="categoria" style="margin: 10px" ngModel #quantity="ngModel" name="filterCategoria" [(ngModel)]="filterCategoria">
+                <option selected value="">Todos</option>
+                <option *ngFor = "let cat of categoria" value="{{cat.categoria_id}}">{{cat.nombre}}</option>
+               
+              </select>
           </p></dt>
-      
         </dl>
-      </div>
     </div>
   </div>
-  
-  <div class="col-sm-12 my-1">
-    <div class="card" style="width: 60rem;">
-      <div class="card-body">
-        <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options"></ng5-slider>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-12 my-1">
-    <div class="card" style="width: 60rem;">
-      <div class="card-body">
-        <input class="form-control" id="nombre" type="text" placeholder="Buscar por nombre..." name="filterPost" [(ngModel)]="filterPost">
-      </div>
-    </div>
-  </div>
-</div>
+</div>  
 
+<!-- FILTRO POR PRECIO -->
+  <div class="col-sm-12 my-1">
+    <div class="card" style="width: 60rem;">
+      <div class="card-body">
+        <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options" name="filterPrecio" [(ngModel)]="filterPrecio" ></ng5-slider>
+      </div>
+    </div>
+  </div>
+ 
+  
+<!-- FILTRO POR NOMBRE   -->
+  <div class="col-sm-12 my-1">
+    <div class="card" style="width: 60rem;">
+      <div class="card-body">
+          <input class="form-control" id="nombre" type="text" placeholder="Buscar por nombre..." name="filterPost" [(ngModel)]="filterPost">
+      </div>
+    </div>
+  </div>
+
+</div>
+    
 
   <div class="container" data-aos="fade-up">
     <div class="row row-cols-1 row-cols-md-3 g-4" >
-      <div class="col md 8" style="width: 18rem;" *ngFor="let product of product | filter: filterPost " >
+      <div class="col md 8" style="width: 18rem;" *ngFor="let product of product | filter: filterPost | filterCategoria: filterCategoria | filterPrecio: filterPrecio " >
         <div class="card">
           <img src="https://cdn.pixabay.com/photo/2018/01/01/14/21/one-3054263_960_720.jpg"  class="card-img-top" class="zoom"   alt="...">
 

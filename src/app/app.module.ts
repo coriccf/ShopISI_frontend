@@ -18,6 +18,8 @@ import { FormProductComponent } from './components/products/form-product.compone
 import { FormsModule } from '@angular/forms';
 import { CatalogueComponent } from './components/catalogue/catalogue.component';
 import { FilterPipe } from './pipes/filter.pipe';
+import { FilterPipe1 } from './pipes Categoria/filterCategoria.pipe';
+import { FilterPipe2 } from './pipes Precio/filterPrecio.pipe';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { UserAdminComponent } from './components/user/user-admin/user-admin.component';
 import { UserUpdateComponent } from './components/user/user-update/user-update.component';
@@ -74,7 +76,9 @@ const routes: Routes = [
     ProductsComponent,
     FormProductComponent,
     CatalogueComponent,
+    FilterPipe1,
     FilterPipe,
+    FilterPipe2,
     ProductDetailsComponent,
     UserAdminComponent,
     UserUpdateComponent,

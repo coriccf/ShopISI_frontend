@@ -31,9 +31,12 @@ export class CategoriasComponent implements OnInit {
   delete(categoria:Categoria):void{
     console.log("Delege");
     this.categoriaService.delete(categoria.categoria_id).subscribe(
-      res=> this.categoriaService.getAll().subscribe(
-        response=> this.categorias=response
-      )
+      res=>{
+         this.categoriaService.getAll().subscribe(
+        response=> {
+          this.categorias=response}, 
+          
+      )}, err=> window.alert("No se puede elminar por que la categoria esta siendo usada")
     );
   }
 
