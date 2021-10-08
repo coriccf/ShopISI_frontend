@@ -28,6 +28,7 @@ import { UserAdminUpdateComponent } from './components/user/user-admin-update/us
 import { OrderComponent } from './order/order.component';
 import { ProfileClientComponent } from './components/profile-client/profile-client.component';
 import { Ng5SliderModule } from 'ng5-slider';
+import { ClientEditComponent } from './components/client-edit/client-edit.component';
 
 
 const routes: Routes = [
@@ -58,6 +59,7 @@ const routes: Routes = [
   { path: 'order/:id', component: OrderComponent, pathMatch: 'full'},
   { path: 'cart/:id', component: OrderComponent, pathMatch: 'full'},
   { path: 'profile-client/:id', component: ProfileClientComponent, pathMatch: 'full'},
+  { path: 'client-edit/:id', component: ClientEditComponent, pathMatch: 'full'},
 
   { path: '', redirectTo: '/', pathMatch: 'full' },
 ];
@@ -84,6 +86,7 @@ const routes: Routes = [
     FormCategoriaComponent,
     OrderComponent,
     ProfileClientComponent,
+    ClientEditComponent,
 
 
 
