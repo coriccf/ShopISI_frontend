@@ -27,6 +27,12 @@
             <p class="card-text">{{product.details}}</p>
             <p class="card-text">Bs. {{product.costProduct}}</p>
 
+            <div class="card" *ngIf="product.stock>0" >
+              <p class ="card-text" style="color:#3FC037  ">PRODUCTO DISPONIBLE</p>
+            </div>
+            <div class="card" *ngIf="product.stock==0" >
+              <p class ="card-text" style="color:#F32C1B">PRODUCTO AGOTADO </p>
+            </div>
           </div>
         </div>
       </div>
