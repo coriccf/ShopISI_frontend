@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from './product';
 import { ProductService } from './product.service';
+import { CategoriaService } from '../categorias/categoria.service';
+import { Categoria } from '../categorias/categoria';
+
 
 @Component({
   selector: 'app-products',
@@ -8,16 +11,20 @@ import { ProductService } from './product.service';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
+  [x: string]: any;
   filterPost='';
 
   products!: Product[];
+  categoria: Array<Categoria>=[];
 
 
-  constructor(private productService:ProductService) { }
-
+  constructor(private productService:ProductService, private categoriaService:CategoriaService) { }
   ngOnInit(): void {
     this.productService.getAll().subscribe(
       p => this.products=p
+    );
+    this.categoriaService.getAll().subscribe(
+      c => this.categorias=c
     );
   }
 

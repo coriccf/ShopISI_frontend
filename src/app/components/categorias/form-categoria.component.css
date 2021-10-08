@@ -1,0 +1,40 @@
+.container-sm{
+    margin-top: 100px;
+    margin-left: 250px;
+    margin-right: 70px;
+    margin-bottom: 100px;
+  }
+  .btn.btn-primary{
+    margin-top: 85px;
+    margin-bottom: 25px;
+  
+  }
+  .card-title{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  
+  }
+  
+  .col-md-6 position-relative{
+    margin-top: 20px;
+  
+  }
+  
+  .position-absolute.start-50.translate-middle{
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .row.g-3.needs-validation{
+    margin-top: 40px;
+  }
+  
+  .btn-space {
+    margin-right: 5px;
+  }
+  #btnEdit,
+  #btnDelete{
+      display: inline-block;
+      vertical-align: top;
+  }
+  

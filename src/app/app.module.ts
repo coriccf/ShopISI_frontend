@@ -27,7 +27,7 @@ import { ProfileViewComponent } from './components/profile-view/profile-view.com
 import { UserAdminUpdateComponent } from './components/user/user-admin-update/user-admin-update.component';
 import { OrderComponent } from './order/order.component';
 import { ProfileClientComponent } from './components/profile-client/profile-client.component';
-
+import { Ng5SliderModule } from 'ng5-slider';
 
 
 const routes: Routes = [
@@ -94,10 +94,13 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    Ng5SliderModule,
+ 
 
   ],
   providers: [],
   bootstrap: [AppComponent]
+  
 })
 export class AppModule { }

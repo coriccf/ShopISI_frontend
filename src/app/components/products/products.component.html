@@ -1,10 +1,18 @@
-<div class="container">
+<div class="container-sm">
+  <div class="position top-50 start-50">
+    <button class="btn btn-dark" type="button" [routerLink]="['/products/form']">Nuevo producto</button>
+  </div>
+  <div class="card" style="width: 60rem;">
+    <div class="card-body">
 
-<button class="btn btn-info" type="button" [routerLink]="['/products/form']">NUEVO</button>
-  <table class="table">
+      <div class="position-absolute start-50 translate-middle">
+        <h1 class="card-title"><b>Lista de Productos</b></h1>
+      </div>
+
+      <table class="table table-sm">
    
-    <thead class="thead-dark">
-      <tr>
+        <thead>
+          <tr>
         <th scope="col">#</th>
         <th scope="col">Producto</th>
         <th scope="col">Detalles</th>
@@ -13,9 +21,8 @@
         <th scope="col">Costo</th>
         <th scope="col">Stock</th>
         <th scope="col">Categoria</th>
-        <th scope="col">        </th>
-        <th scope="col">        </th>
-        
+        <th scope="col">Accion</th>
+    
         
       </tr>
     </thead>
@@ -29,11 +36,18 @@
         <td>{{product.costProduct}}</td>
         <td>{{product.stock}}</td>
         <td>{{product.categoria_categoria_id}}</td>
+        <td>
+          <div>
+           <button class="btn btn-success" style="margin: 10px" type="btnEdit" [routerLink]="['/products/form', product.product_id]">Editar</button>
+           <button  name="btnDelete" style="margin: 10px"  class="btn btn-danger" (click)="delete(product)">Eliminar</button>
+      
+          </div>
+          </td>
 
-        <td> <button type="button" name="button" class="btn btn-primary" [routerLink]="['/products/form', product.product_id]">Editar</button> </td>
-        <td> <button class="btn btn-danger" (click)="delete(product)">Eliminar</button> </td>
+
+
+
       </tr>
-
 
 
 

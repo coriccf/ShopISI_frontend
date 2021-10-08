@@ -30,6 +30,7 @@ export class CategoriaService {
 
   // ACTUALIZAR UNA CATEGORIA 
   update(categoria:Categoria):Observable<Categoria>{
+    console.log(categoria);
     return this.http.put<Categoria>(this.url, categoria);
   }
 

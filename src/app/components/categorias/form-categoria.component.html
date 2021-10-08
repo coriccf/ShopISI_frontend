@@ -1,15 +1,44 @@
-<div class="container">
-    <div class="card-body">
-        <h5 class="card-title">{{titulo}}</h5>
-        <form>
-            <div class="form-group row">
-                <label for ="nombre" class="col-form-label col-sm-2">Nombre Categoria</label>
-                <div class="col-sm-6">
-                    <input type="text" class="form-control" name="nombre" [(ngModel)]="categoria.nombre" >
-                </div>
+<div class="container-sm">
 
-            </div>
-            <!-- <div class="form-group row">
+    <div class="card" style="width: 60rem;">
+      <div class="card-body">
+  
+        <div class="position-absolute start-50 translate-middle">
+          <h1 class="card-title"><b>Registrar categorias</b></h1>
+        </div>
+  
+            <form  class="row g-3 needs-validation" novalidate  >
+
+                <div class="col-md-12 position-relative"><br><br>
+                        <label for="nomnbre">Nombre</label>
+                        <input type="text" class="form-control" name="nombre" [(ngModel)]="categoria.nombre">
+                </div>
+            
+
+                <div class="col-md-6 " class="text-center well">
+                    <div class="position top-50 start-50">
+        
+                            <button class="btn btn-dark" style="margin: 10px" type="button" [routerLink]="['/categorias']">Atrás</button>
+        
+                            <button class="btn btn-success" style="margin: 10px" type="submit" role="button" (click)='create()'*ngIf="!categoria.categoria_id else elseBlock">Crear categoria</button>
+                            <ng-template #elseBlock>
+                                <button class="btn btn-success" style="margin: 10px" type="submit" role="button" (click)='update()'>Actualizar</button>
+                            </ng-template>
+        
+        
+                    </div>
+                </div>
+            </form>
+
+    </div>
+
+
+    </div>
+
+</div>
+
+
+<!-- <div class="form-group row">
                 <label for ="status" class="col-form-label col-sm-2">Status</label>
                 <div class="col-sm-6">
                     <input type="text" class="form-control" name="status" [(ngModel)]="categoria.status" >
@@ -29,16 +58,3 @@
                     <img class="image-thumbnail" style="max-height: 100px" *ngFor="let im of imagenMin" [src]="im">
                 </div>
             </div> -->
-            <button class="btn btn-success" role="button" (click)='create()' *ngIf="!categoria.categoria_id else elseBlock">Agregar</button>
-            
-            <ng-template #elseBlock>
-                <button class="btn btn-success" role="button" (click)='update()'>Actualizar</button>
-            </ng-template>
-
-        </form>
-    </div>
-
-
-
-    <p>form-product works!</p>
-</div>

@@ -1,19 +1,24 @@
 <div class="container-sm">
-  <div class="col-sm-12 my-1">
-
-<button class="btn btn-info" type="button" [routerLink]="['/categorias/form']">NUEVO</button>
+  <div class="position top-50 start-50">
+    <button class="btn btn-dark" type="button" [routerLink]="['/categorias/form']">Nueva categoria</button>
   </div>
-  <table class="table">
+  <div class="card" style="width: 60rem;">
+    <div class="card-body">
+
+      <div class="position-absolute start-50 translate-middle">
+        <h1 class="card-title"><b>Lista de Categorias</b></h1>
+      </div>
+
+      <table class="table table-sm">
    
-    <thead class="thead-dark">
-      <tr>
+        <thead>
+          <tr>
         <th scope="col">#</th>
         <th scope="col">Nombre Categoria</th>
         <th scope="col">Status</th>
-        <th scope="col">        </th>
-        <th scope="col">        </th>
-        <th scope="col">        </th>
+        <th scope="col">Accion</th>
         
+    
       </tr>
     </thead>
     <tbody>
@@ -21,24 +26,19 @@
         <th scope="row">{{categoria.categoria_id}}</th>
         <td>{{categoria.nombre}}</td>
         <td>{{categoria.status}}</td>
-        <td> <button type="button" name="button" class="btn btn-primary" [routerLink]="['/categorias/form', categoria.categoria_id]">Editar</button> </td>
-        
-        <td> <button class="btn btn-danger" (click)="delete(categoria)">Eliminar</button> </td>
+        <td>
+          <div>
+           <button class="btn btn-success" style="margin: 10px" type="btnEdit" [routerLink]="['/categorias/form', categoria.categoria_id]">Editar</button>
+           <button  name="btnDelete" style="margin: 10px"  class="btn btn-danger" (click)="delete(categoria)">Eliminar</button>
+           
+          
 
-        <td><button class ="btn btn-success" (click)= "categoria.status = !categoria.status">
-          {{categoria.status ? 'Deshabilitar' : '  Habilitar  '}}
+           <button type="button"style="margin: 10px" name ="btnView" class="btn btn-warning" (click)= "cargar(categoria.categoria_id) ">
+            {{categoria.status ? 'Deshabilitar' : '  Habilitar  '}}</button>
 
-        </button></td>
-        <div *ngif = "categoria.status; else CasoFalso">
-          Caso Verdadero
-        </div>
-        <!-- <ng-template #CasoVerdadero>
-          Caso Verdadero
-        </ng-template>
-         -->
-        <ng-template #CasoFalso>
-          Caso Falso
-        </ng-template>
+          </div>
+          </td>
+   
          
       </tr>
       

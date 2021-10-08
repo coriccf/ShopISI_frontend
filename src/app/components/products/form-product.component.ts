@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from './product';
 import { ProductService } from './product.service';
+import { CategoriaService } from '../categorias/categoria.service';
+import { Categoria } from '../categorias/categoria';
 
 @Component({
   selector: 'app-form-product',

@@ -13,11 +13,15 @@ export class CategoriasComponent implements OnInit {
   buttonDisabled: boolean = false;
 
   filterPost='';
-
+  categoria_id: number=0;
+      nombre: string= "";
+      status: boolean=true;
+      categoria:Categoria= new Categoria(this.categoria_id,this.nombre, this.status); 
+  
   categorias!: Categoria[];
 
 
-  constructor(private categoriaService:CategoriaService) { }
+  constructor(private categoriaService:CategoriaService, private activatedRoute:ActivatedRoute, private router:Router) {  }
 
   ngOnInit(): void {
     this.categoriaService.getAll().subscribe(
@@ -31,6 +35,29 @@ export class CategoriasComponent implements OnInit {
         response=> this.categorias=response
       )
     );
+  }
+
+  cargar(id:number):void{ 
+          this.categoriaService.get(id).subscribe(
+            
+
+            es=> {this.categoria=es;
+          console.log(es);
+              this.update();}
+          
+            );
+        }
+
+    
+
+  update():void{
+    this.categoria= new Categoria(this.categoria.categoria_id, this.categoria.nombre, !this.categoria.status);
+    this.categoriaService.update(this.categoria).subscribe(
+      e=>{ console.log(e);
+        this.router.navigate(['/categorias'])
+      }
+    )
+ 
   }
 
 }

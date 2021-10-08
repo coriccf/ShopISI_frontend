@@ -44,11 +44,7 @@ export class FormCategoriaComponent implements OnInit {
       e=> this.router.navigate(['/categorias'])
     );
   }
-  updateStatus():void{
-    this.categoriaService.update(this.categoria).subscribe(
-      e=> this.router.navigate(['/categorias'])
-    );
-  }
+ 
   create():void{
     console.log(this.categoria);
     this.categoriaService.create(this.categoria).subscribe(

@@ -1,39 +1,55 @@
-<section id="portfolio" class="portfolio">
+<div class="container" data-aos="fade-up">
+  
+  <div class="col-sm-12 my-1">
+    <div class="card" style="width: 60rem;">
+      <div class="card-body">
+        <dl class="" style="margin: 20px">
+          <dt><p class="card-text">Escoge una Categoria
+            <select id = "inputSize" name="categoria" style="margin: 10px" ngModel #quantity="ngModel">
+              <option selected>Todos</option>
+              <option *ngFor = "let cat of categoria" value="1">{{cat.nombre}}</option>
+           
+            </select>
+          </p></dt>
+      
+        </dl>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-sm-12 my-1">
+    <div class="card" style="width: 60rem;">
+      <div class="card-body">
+        <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options"></ng5-slider>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-12 my-1">
+    <div class="card" style="width: 60rem;">
+      <div class="card-body">
+        <input class="form-control" id="nombre" type="text" placeholder="Buscar por nombre..." name="filterPost" [(ngModel)]="filterPost">
+      </div>
+    </div>
+  </div>
+</div>
+
 
   <div class="container" data-aos="fade-up">
-    <div class="col-sm-12 my-1">
-
-  <input class="form-control" id="nombre" type="text" placeholder="Search.." name="filterPost" [(ngModel)]="filterPost">
-  </div>
-
-
-</div>
-<br>
-<br>
-  <div class="containerCard" data-aos="fade-up">
-
-
-
-
-
     <div class="row row-cols-1 row-cols-md-3 g-4" >
       <div class="col md 8" style="width: 18rem;" *ngFor="let product of product | filter: filterPost " >
-
         <div class="card">
           <img src="https://cdn.pixabay.com/photo/2018/01/01/14/21/one-3054263_960_720.jpg"  class="card-img-top" class="zoom"   alt="...">
-
-          <div class="card-body">
-            <a class="card-link"style="font-size: 17px; color: black;" [routerLink]="['../product-details',product.product_id]">{{product.product_name}}</a>
-            <p class="card-text">{{product.details}}</p>
-            <p class="card-text">Bs. {{product.costProduct}}</p>
-
-          </div>
+            <div class="card-body">
+              <a class="card-link"style="font-size: 17px; color: black;" [routerLink]="['../product-details',product.product_id]">{{product.product_name}}</a>
+              <p class="card-text">{{product.details}}</p>
+              <p class="card-text">Bs. {{product.costProduct}}</p>
+            </div>
         </div>
       </div>
     </div>
-</div>
+  </div>
 
-</section>
+
 
 
 
