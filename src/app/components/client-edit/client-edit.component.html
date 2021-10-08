@@ -1,1 +1,62 @@
-<p>client-edit works!</p>
+<div class="container-sm">
+
+    <div class="card" style="width: 60rem;">
+      <div class="card-body">
+  
+        <div class="position-absolute start-50 translate-middle">
+          <h1 class="card-title"><b>Editar Cliente</b></h1>
+        </div>
+  
+      <form  class="row g-3 needs-validation" novalidate  >
+  
+        <div class="col-md-6 position-relative"><br><br>
+  
+          <label for="inputFirstname">Nombre</label>
+          <input type="text" class="form-control" id="inputName"  name="name" [(ngModel)]="client.name"
+          >
+  
+        </div>
+  
+        <div class="col-md-6 position-relative"><br><br>
+  
+            <label for="inputLastname">Apellido</label>
+            <input type="text" class="form-control" id="inputLastname" name="lastname" [(ngModel)]="client.lastname"
+            >  
+        </div>
+
+        <div class="col-md-6 position-relative">
+  
+          <label for="inputEmail">Telefono</label>
+          <input type="email" class="form-control" id="inputEmail"  name="email" [(ngModel)]="client.telephone"
+          >
+        </div>
+  
+
+        <div class="col-md-6 position-relative">
+  
+          <label for="inputFirstname">Nombre de usuario</label>
+          <input type="text" class="form-control" id="inputUsername"  name="username" [(ngModel)]="client.username" >
+        </div>
+
+
+        <div class="col-md-6 position-relative">
+  
+            <label for="inputEmail">Direccion</label>
+            <input type="email" class="form-control" id="inputEmail"  name="email" [(ngModel)]="client.telephone"
+            >
+          </div>
+  
+        <div class="col-md-6 " class="text-center well">
+          <div class="position top-50 start-50">
+  
+            <button class="btn btn-dark" style="margin: 10px" type="button" [routerLink]="['/list-clients']">Atrás</button>
+
+              <button class="btn btn-success" style="margin: 10px" type="submit" role="button" (click)='update()'>Actualizar</button>
+          </div>
+        </div>
+      </form>
+  
+      </div>
+    </div>
+  </div>
+  
