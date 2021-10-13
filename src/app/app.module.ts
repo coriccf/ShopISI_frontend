@@ -34,6 +34,7 @@ import { ClientEditComponent } from './components/client-edit/client-edit.compon
 import { ConfirmationPopoverModule} from 'angular-confirmation-popover';
 import { PedidosComponent } from './components/pedidos/pedidos.component';
 import { UserLoginComponent } from './components/user/user-login/user-login.component';
+import { CardComponent } from './card/card.component';
 
 
 
@@ -69,6 +70,8 @@ const routes: Routes = [
   { path: 'profile-client/:id', component: ProfileClientComponent, pathMatch: 'full'},
   { path: 'client-edit/:id', component: ClientEditComponent, pathMatch: 'full'},
   { path: 'user-login', component: UserLoginComponent, pathMatch: 'full'},
+  { path: 'card', component: CardComponent, pathMatch: 'full'},
+  { path: 'card/:id', component: CardComponent, pathMatch: 'full'},
 
 
   { path: '', redirectTo: '/', pathMatch: 'full' },
@@ -102,6 +105,7 @@ const routes: Routes = [
     ClientEditComponent,
     PedidosComponent,
     UserLoginComponent,
+    CardComponent,
 
   ],
   imports: [
