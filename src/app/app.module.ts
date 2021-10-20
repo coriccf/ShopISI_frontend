@@ -36,6 +36,8 @@ import { PedidosComponent } from './components/pedidos/pedidos.component';
 import { UserLoginComponent } from './components/user/user-login/user-login.component';
 import { CardComponent } from './card/card.component';
 import { ReceiptComponent } from './components/receipt/receipt.component';
+import { CardUpdateComponent } from './card-update/card-update.component';
+import { CardFormComponent } from './card/card-form.component';
 
 
 
@@ -74,6 +76,8 @@ const routes: Routes = [
   { path: 'card', component: CardComponent, pathMatch: 'full'},
   { path: 'card/:id', component: CardComponent, pathMatch: 'full'},
   { path: 'receipt', component: ReceiptComponent, pathMatch: 'full'},
+  { path: 'card/card-form', component: CardFormComponent,pathMatch:'full'},
+  { path: 'card/card-form/:id', component: CardFormComponent,pathMatch:'full'},
 
 
   { path: '', redirectTo: '/', pathMatch: 'full' },
@@ -109,6 +113,8 @@ const routes: Routes = [
     UserLoginComponent,
     CardComponent,
     ReceiptComponent,
+    CardUpdateComponent,
+    CardFormComponent,
 
   ],
   imports: [
