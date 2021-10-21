@@ -38,6 +38,7 @@ import { CardComponent } from './card/card.component';
 import { ReceiptComponent } from './components/receipt/receipt.component';
 import { CardUpdateComponent } from './card-update/card-update.component';
 import { CardFormComponent } from './card/card-form.component';
+import { PipeCardPipe } from './pipe-card/pipe-card.pipe';
 
 
 
@@ -117,6 +118,7 @@ const routes: Routes = [
     ReceiptComponent,
     CardUpdateComponent,
     CardFormComponent,
+    PipeCardPipe,
 
   ],
   imports: [
