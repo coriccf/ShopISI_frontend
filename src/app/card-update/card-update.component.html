@@ -1,1 +1,85 @@
-<p>card-update works!</p>
+<div class="container">
+
+  <div class="abs-center">
+
+    <form class="border p-3 form row g-3 needs-validation" novalidate>
+
+      <div class=" py-5 text-center">
+        <h2 style="color: black;">Actualizar datos</h2>
+      </div>
+
+      <div class="col-md-6 position-relative"><br><br>
+        <label for="inputCardname">Nombre</label>
+        <input type= "text" class="form-control" id="inputNamecard" name="card_name"
+        ngModel  #card_name="ngModel"
+        [class.is-invalid]="card_name.invalid && card_name.touched"
+        minlength="1"
+        pattern=".*\S+.*"
+        required>
+        <small class="form-text text-danger" *ngIf="card_name.invalid && card_name.touched">El campo es obligatorio</small>
+      </div>
+
+      <div class="col-md-6 position-relative"><br><br>
+        <label for="inputLastname">Número de tarjeta</label>
+        <input type="text" class="form-control" id="inputCardNumber" name="card_number" ngModel #card_number="ngModel"
+        [class.is-invalid]="card_number.invalid && card_number.touched"
+        minlength="6"
+        pattern="^\+?\d{6,}"
+        required >
+        <small class="form-text text-danger" *ngIf="card_number.invalid && card_number.touched">El campo es obligatorio</small>
+    </div>
+
+    <div class="col-md-6 position-relative">
+          <label for="inputExpirationYear">Año de expiración</label>
+          <input type="text" class="form-control" id="inputExpirationyear" name="expiration_year" ngModel #expiration_year="ngModel"
+          [class.is-invalid]="expiration_year.invalid && expiration_year.touched"
+          minlength="1"
+          pattern="^\+?\d{6,}"
+          required >
+      <small class="form-text text-danger" *ngIf="expiration_year.invalid && expiration_year.touched">Ingrese datos válidos</small>
+    </div>
+
+  <div class="col-md-6 position-relative">
+    <label for="inputExpirationMonth">Mes de expiración</label>
+    <select id = "inputExpirationMonth" id="inputExpirationmonth" name="expiration_month" style="margin: 10px" ngModel #expiration_month="ngModel"
+    [class.is-invalid]="expiration_month.invalid && expiration_month.touched"
+    required >
+      <option selected>Enero</option>
+      <option value="1">Enero</option>
+      <option value="2">Febrero</option>
+      <option value="3">Marzo</option>
+      <option value="4">Abril</option>
+      <option value="5">Mayo</option>
+      <option value="6">Junio</option>
+      <option value="7">Julio</option>
+      <option value="8">Agosto</option>
+      <option value="9">Septiembre</option>
+      <option value="10">Octubre</option>
+      <option value="11">Noviembre</option>
+      <option value="12">Diciembre</option>
+    </select>
+    <small class="form-text text-danger" *ngIf="expiration_month.invalid && expiration_month.touched"></small>
+  </div>
+
+  <div class="col-md-6 position-relative">
+    <label for="inputPhone">CVC</label>
+                <input type="text" class="form-control" id="cvc" name="cvc" ngModel #cvc="ngModel"
+                [class.is-invalid]="cvc.invalid && cvc.touched"
+                minlength="6"
+                pattern="^\+?\d{6,}"
+                required >
+            <small class="form-text text-danger" *ngIf="cvc.invalid && cvc.touched">campo obligatorio o el campo esta incorrecto</small>
+  </div> <br><br>
+
+  <div class="col-md-6 " class="text-center well">
+    <div class="position top-50 start-50">
+
+      <button class="btn btn-dark" style="margin: 10px" type="button" [routerLink]="['/card']">Atrás</button>
+
+        <button class="btn btn-success" type="submit">Actualizar</button>
+    </div>
+  </div>
+
+    </form>
+  </div>
+</div>
