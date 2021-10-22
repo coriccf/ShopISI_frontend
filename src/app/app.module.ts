@@ -34,10 +34,10 @@ import { ClientEditComponent } from './components/client-edit/client-edit.compon
 import { ConfirmationPopoverModule} from 'angular-confirmation-popover';
 import { PedidosComponent } from './components/pedidos/pedidos.component';
 import { UserLoginComponent } from './components/user/user-login/user-login.component';
-import { CardComponent } from './card/card.component';
+import { CardComponent } from './components/card/card.component';
 import { ReceiptComponent } from './components/receipt/receipt.component';
-import { CardUpdateComponent } from './card-update/card-update.component';
-import { CardFormComponent } from './card/card-form.component';
+import { CardUpdateComponent } from './components/card-update/card-update.component';
+import { CardFormComponent } from './components/card/card-form.component';
 import { PipeCardPipe } from './pipe-card/pipe-card.pipe';
 
 
