@@ -8,8 +8,8 @@
         </div>
 
 
-        <table class="table table-sm">
-          <thead  class="thead-dark">
+        <table class="table table-sm"  >
+          <thead  class="thead-ligth">
             <tr>
               <th scope="col">#</th>
               <th scope="col">Usuario</th>
@@ -21,18 +21,18 @@
           </thead>
 
           <tbody>
-            <tr *ngFor="let client of client">
-              <th scope="row">{{client.client_id}}</th>
-            
-              <td>{{client.username}}</td>
-              <td>{{client.name}}</td>
-              <td>{{client.email}}</td>
+            <tr *ngFor="let user of user">
+              <th scope="row">{{user.user_id}}</th>
+              <td>{{user.username}}</td>
+              <td>{{user.name}}</td>
+              <td>{{user.email}}</td>
             
              <td>
               <div>
-            
-                <button type="button"style="margin: 10px" name ="btnView" class="btn btn-info" [routerLink]="['/profile-client', client.client_id]" >Ver Perfil</button>
-                <button class="btn btn-success" style="margin: 10px" type="btnEdit" [routerLink]="['/client-edit', client.client_id]">Editar</button>
+           <button type="button"style="margin: 10px" name ="btnView" class="btn btn-info" [routerLink]="['/profile-client', user.user_id]" >Ver Perfil</button>
+            <button class="btn btn-success" style="margin: 10px" type="btnEdit" [routerLink]="['/client-edit', user.user_id]">Editar</button>
+
+
               </div>
               </td>
             </tr>
