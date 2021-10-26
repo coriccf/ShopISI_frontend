@@ -23,8 +23,8 @@
         <label for="inputLastname">Número de tarjeta</label>
         <input type="text" class="form-control" id="inputCardNumber" name="card_number" ngModel #card_number="ngModel"
         [class.is-invalid]="card_number.invalid && card_number.touched"
-        minlength="6"
-        pattern="^\+?\d{6,}"
+        minlength="10"
+        pattern="^\+?\d{10,}"
         required >
         <small class="form-text text-danger" *ngIf="card_number.invalid && card_number.touched">El campo es obligatorio</small>
     </div>
@@ -33,8 +33,8 @@
           <label for="inputExpirationYear">Año de expiración</label>
           <input type="text" class="form-control" id="inputExpirationyear" name="expiration_year" ngModel #expiration_year="ngModel"
           [class.is-invalid]="expiration_year.invalid && expiration_year.touched"
-          minlength="1"
-          pattern="^\+?\d{6,}"
+          minlength="4"
+          pattern="^\+?\d{4,}"
           required >
       <small class="form-text text-danger" *ngIf="expiration_year.invalid && expiration_year.touched">Ingrese datos válidos</small>
     </div>
@@ -65,8 +65,8 @@
     <label for="inputPhone">CVC</label>
                 <input type="text" class="form-control" id="cvc" name="cvc" ngModel #cvc="ngModel"
                 [class.is-invalid]="cvc.invalid && cvc.touched"
-                minlength="6"
-                pattern="^\+?\d{6,}"
+                minlength="3"
+                pattern="^\+?\d{3,}"
                 required >
             <small class="form-text text-danger" *ngIf="cvc.invalid && cvc.touched">campo obligatorio o el campo esta incorrecto</small>
   </div> <br><br>
