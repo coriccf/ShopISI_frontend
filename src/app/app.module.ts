@@ -39,6 +39,7 @@ import { ReceiptComponent } from './components/receipt/receipt.component';
 import { CardUpdateComponent } from './components/card-update/card-update.component';
 import { CardFormComponent } from './components/card/card-form.component';
 import { PipeCardPipe } from './pipe-card/pipe-card.pipe';
+import { NgxPermissionsModule } from 'ngx-permissions';
 
 
 
@@ -131,6 +132,7 @@ const routes: Routes = [
     HttpClientModule,
     FormsModule,
     Ng5SliderModule,
+    NgxPermissionsModule.forRoot()
 
 
   ],
