@@ -42,7 +42,6 @@ import { PipeCardPipe } from './pipe-card/pipe-card.pipe';
 import { NgxPermissionsModule } from 'ngx-permissions';
 
 
-
 const routes: Routes = [
   { path: 'sesion', component: SesionComponent  },
   { path: 'cart', component: CartComponent  },

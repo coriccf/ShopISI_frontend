@@ -16,10 +16,10 @@ export class CardFormComponent implements OnInit{
   expiration_year: number=0;
   expiration_month: number=0;
   cvc: number=0;
-  //creation_date!: Date;
+  creation_date: string="";
   status: number=0;
 
-  card: Card = new Card(this.card_id, this.user_id, this.card_name, this.card_number, this.expiration_year, this.expiration_month, this.cvc, this.status);
+  card: Card = new Card(this.card_id, this.user_id, this.card_name, this.card_number, this.expiration_year, this.expiration_month, this.cvc, this.creation_date, this.status);
 
   constructor(private cardService: CardService, private router: Router, private activatedRoute: ActivatedRoute){ }
 
