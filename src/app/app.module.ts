@@ -40,10 +40,11 @@ import { CardUpdateComponent } from './components/card-update/card-update.compon
 import { CardFormComponent } from './components/card/card-form.component';
 import { PipeCardPipe } from './pipe-card/pipe-card.pipe';
 import { NgxPermissionsModule } from 'ngx-permissions';
+import { MainComponent } from './main/main.component';
 
 
 const routes: Routes = [
-  { path: 'sesion', component: SesionComponent  },
+  /*{ path: 'sesion', component: SesionComponent  },
   { path: 'cart', component: CartComponent  },
   { path: 'products', component: ProductsComponent  },
   { path: 'pedidos', component: PedidosComponent  },
@@ -81,7 +82,7 @@ const routes: Routes = [
   { path: 'card/card-form/:id', component: CardFormComponent,pathMatch:'full'},
   { path: 'card-update', component: CardUpdateComponent, pathMatch:'full'},
   { path: 'card-update/:id', component: CardUpdateComponent, pathMatch:'full'},
-
+*/
 
   { path: '', redirectTo: '/', pathMatch: 'full' },
 ];
@@ -119,6 +120,7 @@ const routes: Routes = [
     CardUpdateComponent,
     CardFormComponent,
     PipeCardPipe,
+    MainComponent,
 
   ],
   imports: [
