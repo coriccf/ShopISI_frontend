@@ -2,6 +2,10 @@ import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
 import { User } from "./user";
 import { UserService } from "./user.service";
+import { Rol } from "../../rol/rol";
+import { RolService } from "../../rol/rol.service";
+
+
 
 @Component({
   selector: 'app-user-form',
@@ -10,6 +14,7 @@ import { UserService } from "./user.service";
 })
 export class UserFormComponent implements OnInit{
   user_id: number=0;
+  rol_id: number=0
   name: string ="";
   lastname: string="";
   email: string="";
@@ -19,8 +24,9 @@ export class UserFormComponent implements OnInit{
   password:string="";
   rol:string="";
   status: number=0;
+  
 
-user:User=new User(this.user_id, this.name,this.lastname,this.email,this.cellphone,this.telephone,this.username,this.password,this.rol,this.status);
+user:User=new User(this.user_id,this.rol_id,this.name,this.lastname,this.email,this.cellphone,this.telephone,this.username,this.password,this.rol,this.status);
 
   constructor(private userService:UserService, private router:Router, private activatedRoute:ActivatedRoute ) { }
 
