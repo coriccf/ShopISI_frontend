@@ -52,10 +52,10 @@
             <p class="card-text">Bs. {{product.costProduct}}</p>
 
             <div class="card" *ngIf="product.stock>0" >
-              <p class ="card-text" style="color:#3FC037  ">PRODUCTO DISPONIBLE</p>
+              <p class ="card-text" style="color:#3FC037 "> <strong>PRODUCTO DISPONIBLE</strong></p>
             </div>
             <div class="card" *ngIf="product.stock==0" >
-              <p class ="card-text" style="color:#F32C1B">PRODUCTO AGOTADO </p>
+              <p class ="card-text" style="color:#F32C1B"><strong>PRODUCTO AGOTADO </strong></p>
             </div>
           </div>
 
