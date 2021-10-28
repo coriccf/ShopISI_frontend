@@ -26,18 +26,18 @@
               <td>{{user.username}}</td>
               <td>{{user.name}}</td>
               <td>{{user.email}}</td>
-            
+
              <td>
               <div>
-           <button type="button"style="margin: 10px" name ="btnView" class="btn btn-info" [routerLink]="['/profile-client', user.user_id]" >Ver Perfil</button>
-            <button class="btn btn-success" style="margin: 10px" type="btnEdit" [routerLink]="['/client-edit', user.user_id]">Editar</button>
+           <button type="button"style="margin: 10px" name ="btnView" class="btn btn-info" [routerLink]="['/list-clients/profile-client', user.user_id]" >Ver Perfil</button>
+            <button class="btn btn-success" style="margin: 10px" type="btnEdit" [routerLink]="['/list-clients/client-edit', user.user_id]">Editar</button>
 
 
               </div>
               </td>
             </tr>
           </tbody>
-  
+
         </table>
       </div>
       </div>

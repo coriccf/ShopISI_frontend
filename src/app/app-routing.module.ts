@@ -68,20 +68,14 @@ const routes: Routes = [
       },
 
           {
-            path:'product-details',
+            path:'catalogue/product-details',
             component: ProductDetailsComponent,
           },
 
           {
-            path:'product-details/:id',
+            path:'catalogue/product-details/:id',
             component: ProductDetailsComponent,
           },
-
-      /*    {
-            path:'product-details/:id/cart',
-            component: CartComponent,
-          },*/
-
 
           {
             path:'cart',
@@ -102,7 +96,7 @@ const routes: Routes = [
           },
 
           {
-            path:'card',
+            path:'cart/card',
             component: CardComponent,
           },
           {
@@ -132,21 +126,17 @@ const routes: Routes = [
           },
 
           {
-            path:'profile-client',
-            component: ProfileClientComponent,
+            path:'list-clients/client-edit',
+            component: ClientEditComponent,
           },
           {
-            path:'profile-client/:id',
-            component: ProfileClientComponent
+            path:'list-clients/client-edit/:id',
+            component: ClientEditComponent,
           },
 
           {
-            path:'client-edit',
-            component: ClientEditComponent,
-          },
-          {
-            path:'client-edit/:id',
-            component: ClientEditComponent,
+            path:'pedidos',
+            component: PedidosComponent,
           },
 
   //  ],
@@ -167,7 +157,7 @@ const routes: Routes = [
         component: FormProductComponent,
       },
       {
-        path:'products/for/:id',
+        path:'products/form/:id',
         component: FormProductComponent,
       },
 
@@ -184,13 +174,22 @@ const routes: Routes = [
         component: UserFormComponent,
       },
       {
-        path:'user-admin-update',
+        path:'user-admin/user-admin-update',
         component: UserAdminUpdateComponent,
       },
       {
-        path:'user-admin-update/:id',
+        path:'user-admin/user-admin-update/:id',
         component: UserAdminUpdateComponent,
       },
+      {
+        path:'user-admin/profile-view',
+        component: ProfileViewComponent,
+      },
+      {
+        path:'user-admin/profile-view/:id',
+        component: ProfileViewComponent,
+      },
+
 
 
       {
@@ -210,20 +209,18 @@ const routes: Routes = [
         path:'list-clients',
         component: ListClientsComponent,
       },
-
       {
-        path:'pedidos',
-        component: PedidosComponent,
+        path:'list-clients/profile-client',
+        component: ProfileClientComponent,
+      },
+      {
+        path:'list-clients/profile-client/:id',
+        component: ProfileClientComponent,
       },
 
-      {
-        path:'profile-view',
-        component: ProfileViewComponent,
-      },
-      {
-        path:'profile-view/:id',
-        component: ProfileViewComponent,
-      },
+
+
+
 
 
   //  ],
