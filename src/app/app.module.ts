@@ -33,16 +33,27 @@ import { Ng5SliderModule } from 'ng5-slider';
 import { ClientEditComponent } from './components/client-edit/client-edit.component';
 import { ConfirmationPopoverModule} from 'angular-confirmation-popover';
 import { PedidosComponent } from './components/pedidos/pedidos.component';
+import { UserLoginComponent } from './components/user/user-login/user-login.component';
+import { CardComponent } from './components/card/card.component';
+import { ReceiptComponent } from './components/receipt/receipt.component';
+import { CardUpdateComponent } from './components/card-update/card-update.component';
+import { CardFormComponent } from './components/card/card-form.component';
+import { PipeCardPipe } from './pipe-card/pipe-card.pipe';
+import { NgxPermissionsModule } from 'ngx-permissions';
+import { MainComponent } from './main/main.component';
 
 
 
 const routes: Routes = [
-  { path: 'sesion', component: SesionComponent  },
+  /*{ path: 'sesion', component: SesionComponent  },
   { path: 'cart', component: CartComponent  },
   { path: 'products', component: ProductsComponent  },
   { path: 'pedidos', component: PedidosComponent  },
 
+<<<<<<< HEAD
   
+=======
+>>>>>>> d103becf2a08a25262e193bd0a33cb69036337b1
   { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'products/form', component: FormProductComponent, pathMatch: 'full' },
   { path: 'products/form/:id', component: FormProductComponent, pathMatch: 'full' },
@@ -68,12 +79,21 @@ const routes: Routes = [
   { path: 'cart/:id', component: OrderComponent, pathMatch: 'full'},
   { path: 'profile-client/:id', component: ProfileClientComponent, pathMatch: 'full'},
   { path: 'client-edit/:id', component: ClientEditComponent, pathMatch: 'full'},
+  { path: 'user-login', component: UserLoginComponent, pathMatch: 'full'},
+  { path: 'card', component: CardComponent, pathMatch: 'full'},
+  { path: 'card/:id', component: CardComponent, pathMatch: 'full'},
+  { path: 'receipt', component: ReceiptComponent, pathMatch: 'full'},
+  { path: 'card/card-form', component: CardFormComponent,pathMatch:'full'},
+  { path: 'card/card-form/:id', component: CardFormComponent,pathMatch:'full'},
+  { path: 'card-update', component: CardUpdateComponent, pathMatch:'full'},
+  { path: 'card-update/:id', component: CardUpdateComponent, pathMatch:'full'},
+*/
 
   { path: '', redirectTo: '/', pathMatch: 'full' },
 ];
 
 @NgModule({
-  
+
   declarations: [
     AppComponent,
     NavbarComponent,
@@ -99,9 +119,13 @@ const routes: Routes = [
     ProfileClientComponent,
     ClientEditComponent,
     PedidosComponent,
-
-
-
+    UserLoginComponent,
+    CardComponent,
+    ReceiptComponent,
+    CardUpdateComponent,
+    CardFormComponent,
+    PipeCardPipe,
+    MainComponent,
 
 
   ],
@@ -115,12 +139,13 @@ const routes: Routes = [
     HttpClientModule,
     FormsModule,
     Ng5SliderModule,
- 
+    NgxPermissionsModule.forRoot()
+
 
   ],
   providers: [],
   bootstrap: [AppComponent],
 
-  
+
 })
 export class AppModule { }

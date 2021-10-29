@@ -1,29 +1,27 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from "@angular/router";
-import { Client } from "./client";
-import { ClientService } from "./client.service";
+import { User} from "./user";
+import { UserService } from "./user.service";
 @Component({
   selector: 'app-client-edit',
   templateUrl: './client-edit.component.html',
   styleUrls: ['./client-edit.component.css']
 })
 export class ClientEditComponent implements OnInit {
-
-
-  client_id: number=0;
+  user_id: number=0;
   name: string ="";
   lastname: string="";
   email: string="";
   cellphone: string="";
   telephone: string="";
-  address: string="";
-  clientname: string="";
+  username: string="";
   password:string="";
-  
+  rol:string="";
+  status: number=0;
 
-client:Client=new Client(this.client_id, this.name,this.lastname,this.email,this.cellphone,this.telephone,this.address,this.clientname,this.password);
+  user:User=new User(this.user_id, this.name,this.lastname,this.email,this.cellphone,this.telephone,this.username,this.password,this.rol,this.status);
 
-  constructor(private clientService:ClientService, private router:Router, private activatedRoute:ActivatedRoute ) { }
+  constructor(private userService:UserService, private router:Router, private activatedRoute:ActivatedRoute ) { }
 
   ngOnInit(): void {
     this.cargar();
@@ -34,8 +32,8 @@ client:Client=new Client(this.client_id, this.name,this.lastname,this.email,this
       e=>{
         let id=e['id'];
             if(id){
-              this.clientService.get(id).subscribe(
-                es=> this.client=es
+              this.userService.get(id).subscribe(
+                es=> this.user=es
               );
             }
       }
@@ -43,15 +41,15 @@ client:Client=new Client(this.client_id, this.name,this.lastname,this.email,this
   }
 
   create():void{
-    console.log(this.client);
-    this.clientService.create(this.client).subscribe(
-      res=> this.router.navigate(['/client'])
+    console.log(this.user);
+    this.userService.create(this.user).subscribe(
+      res=> this.router.navigate(['/user'])
     );
   }
 
   update():void{
-    this.clientService.update(this.client).subscribe(
-      e=>this.router.navigate(['/client'])
+    this.userService.update(this.user).subscribe(
+      e=>this.router.navigate(['/user'])
     );
   }
 

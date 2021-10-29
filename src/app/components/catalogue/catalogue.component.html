@@ -1,7 +1,7 @@
 <div class="container" data-aos="fade-up">
 
  <!-- FILTRO POR CATEGORIA         -->
-  
+
  <div class="col-sm-12 my-1">
   <div class="card" style="width: 60rem;">
     <div class="card-body">
@@ -10,13 +10,13 @@
               <select id = "inputSize" name="categoria" style="margin: 10px" ngModel #quantity="ngModel" name="filterCategoria" [(ngModel)]="filterCategoria">
                 <option selected value="">Todos</option>
                 <option *ngFor = "let cat of categoria" value="{{cat.categoria_id}}">{{cat.nombre}}</option>
-               
+
               </select>
           </p></dt>
         </dl>
     </div>
   </div>
-</div>  
+</div>
 
 <!-- FILTRO POR PRECIO -->
   <div class="col-sm-12 my-1">
@@ -26,8 +26,8 @@
       </div>
     </div>
   </div>
- 
-  
+
+
 <!-- FILTRO POR NOMBRE   -->
   <div class="col-sm-12 my-1">
     <div class="card" style="width: 60rem;">
@@ -38,7 +38,7 @@
   </div>
 
 </div>
-    
+
 
   <div class="container" data-aos="fade-up">
     <div class="row row-cols-1 row-cols-md-3 g-4" >
@@ -47,15 +47,15 @@
           <img src="https://cdn.pixabay.com/photo/2018/01/01/14/21/one-3054263_960_720.jpg"  class="card-img-top" class="zoom"   alt="...">
 
                  <div class="card-body">
-            <a class="card-link"style="font-size: 17px; color: black;" [routerLink]="['../product-details',product.product_id]">{{product.product_name}}</a>
+            <a class="card-link"style="font-size: 17px; color: black;" [routerLink]="['/catalogue/product-details',product.product_id]">{{product.product_name}}</a>
             <p class="card-text">{{product.details}}</p>
             <p class="card-text">Bs. {{product.costProduct}}</p>
 
             <div class="card" *ngIf="product.stock>0" >
-              <p class ="card-text" style="color:#3FC037  ">PRODUCTO DISPONIBLE</p>
+              <p class ="card-text" style="color:#3FC037 "> <strong>PRODUCTO DISPONIBLE</strong></p>
             </div>
             <div class="card" *ngIf="product.stock==0" >
-              <p class ="card-text" style="color:#F32C1B">PRODUCTO AGOTADO </p>
+              <p class ="card-text" style="color:#F32C1B"><strong>PRODUCTO AGOTADO </strong></p>
             </div>
           </div>
 
