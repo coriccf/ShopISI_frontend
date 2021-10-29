@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../sesion/user';
+import { UserService } from '../sesion/user.service';
 import { Card } from './card';
 import { CardService } from './card.service';
 
@@ -8,11 +10,13 @@ import { CardService } from './card.service';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
+  [x: string]: any;
   filterPost='';
 
   card!: Card[];
+  user: Array<User>=[];
 
-  constructor(private cardService: CardService) { }
+  constructor(private cardService: CardService, private userService: UserService) { }
 
   ngOnInit(): void {
     this.cardService.getAll().subscribe(

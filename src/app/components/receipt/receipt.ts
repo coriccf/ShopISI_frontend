@@ -6,7 +6,7 @@ export class Receipt {
     card_id: number=0;
     cart_id: number=0;
     date: string="";
-  
+
     constructor(receipt_id:number,product_id:number,user_id:number, address_id:number,cart_id:number, date:string){
         // ,imagen_id:number[]
         this.receipt_id=receipt_id;

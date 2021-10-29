@@ -11,11 +11,12 @@ import { ProductService } from './product.service';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
+  [x: string]:any;
   filterPost='';
 
-  product!: Product[];
   cart!: Cart[];
   cartTotal: any[] = [];
+  product: Array<Product> = [];
 
   itemValue = {
     cartDetailId:0

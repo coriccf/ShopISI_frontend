@@ -1,19 +1,19 @@
 
 <section class="container" *ngFor="let receipt of receipt">
   <div class="content">
-    
-    
-    <img src="assets/img/logo.jpeg"  width="120" height="120" align="right"/> 
-    
+
+
+    <img src="assets/img/logo.jpeg"  width="120" height="120" align="right"/>
+
   <h1 style="text-align:center">RECIBO ISI</h1>
-    <h2 class="text"><strong>Nombre: </strong> {{ receipt.user_id}}</h2>
+    <h2 class="text"><strong>Nombre: </strong> {{ receipt.user_id}</h2>
     <h2 class="text"><strong>Productos: </strong>{{ receipt.card_id }}   </h2>
     <h2 class="text"> <strong>Total a Pagar: </strong>{{ receipt.user_id}} </h2>
-    
+
     <h2 class="text"><strong>Fecha: </strong>{{ receipt.date}}</h2>
     <h2  class="text"><strong>Ciudad: </strong>{{ receipt.product_id}} </h2>
 
- 
+
       <div class="pt-1 mb-3">
                   <button type="button"style="margin: 10px" class="btn btn-dark" [routerLink]="['/catalogue']">
                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
@@ -21,8 +21,8 @@
                         <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
                       </svg>
                   SALIR</button>
-                  
+
                   </div>
-    
+
   </div>
 </section>
