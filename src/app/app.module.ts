@@ -33,6 +33,7 @@ import { Ng5SliderModule } from 'ng5-slider';
 import { ClientEditComponent } from './components/client-edit/client-edit.component';
 import { ConfirmationPopoverModule} from 'angular-confirmation-popover';
 import { PedidosComponent } from './components/pedidos/pedidos.component';
+import { PedidosAdminComponent } from './components/pedidos-admin/pedidos-admin.component';
 import { UserLoginComponent } from './components/user/user-login/user-login.component';
 import { CardComponent } from './components/card/card.component';
 import { ReceiptComponent } from './components/receipt/receipt.component';
@@ -45,15 +46,11 @@ import { MainComponent } from './main/main.component';
 
 
 const routes: Routes = [
-  /*{ path: 'sesion', component: SesionComponent  },
+  { path: 'sesion', component: SesionComponent  },
   { path: 'cart', component: CartComponent  },
   { path: 'products', component: ProductsComponent  },
   { path: 'pedidos', component: PedidosComponent  },
-
-<<<<<<< HEAD
-  
-=======
->>>>>>> d103becf2a08a25262e193bd0a33cb69036337b1
+  { path: 'pedidos-admin', component: PedidosAdminComponent  },
   { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'products/form', component: FormProductComponent, pathMatch: 'full' },
   { path: 'products/form/:id', component: FormProductComponent, pathMatch: 'full' },
@@ -87,7 +84,7 @@ const routes: Routes = [
   { path: 'card/card-form/:id', component: CardFormComponent,pathMatch:'full'},
   { path: 'card-update', component: CardUpdateComponent, pathMatch:'full'},
   { path: 'card-update/:id', component: CardUpdateComponent, pathMatch:'full'},
-*/
+
 
   { path: '', redirectTo: '/', pathMatch: 'full' },
 ];
@@ -119,6 +116,7 @@ const routes: Routes = [
     ProfileClientComponent,
     ClientEditComponent,
     PedidosComponent,
+    PedidosAdminComponent,
     UserLoginComponent,
     CardComponent,
     ReceiptComponent,

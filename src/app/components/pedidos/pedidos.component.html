@@ -40,7 +40,7 @@
                         <img src="https://cdn.shopify.com/s/files/1/0028/9597/0349/products/BLUSA8_1024x.jpg" width="70" class="img-fluid rounded shadow-sm" alt="" >
                         <div class="ml-3 d-inline-block align-middle">
                           <h5 class="mb-0"> <a class="text-dark font-wight-bolde align-middle" *ngFor = "let prod of products" >{{prod.product_name}}</a></h5>
-        
+                          <span class="text-muted font-weight-normal font-italic d-block">{{pedido.product_id}}</span>
                           <span class="text-muted font-weight-normal font-italic d-block">Talla: {{pedido.user_id}}</span>
                           <span class="text-muted font-weight-normal font-italic d-block">Color: {{pedido.order_status_status_id}}</span>
                         </div>
@@ -56,7 +56,7 @@
                       <div  style="margin: 30px">
 
 
-                        <button *ngIf="pedido.order_status_status_id == 1" class="btn btn-success" style="margin: 10px" type="btnEdit" [routerLink]="['/order']">Editar</button>
+                        <button *ngIf="pedido.order_status_status_id == 1" class="btn btn-success" style="margin: 10px" type="btnEdit" [routerLink]="['/catalogue/product-details',pedido.product_id]">Editar</button>
                         
                         <td class="align-middle" *ngIf="pedido.order_status_status_id==2 " style="color:#000000  "><strong>------</strong></td>
                         <td class="align-middle" *ngIf="pedido.order_status_status_id==3 " style="color:#000000 "><strong>------</strong></td>
