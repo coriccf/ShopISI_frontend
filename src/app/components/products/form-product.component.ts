@@ -11,6 +11,8 @@ import { Categoria } from '../categorias/categoria';
   styleUrls: ['./form-product.component.css']
 })
 export class FormProductComponent implements OnInit {
+
+  categoria: Array<Categoria>=[];
       product_id: number=0;
       product_name: string= "";
       details: string="";

@@ -46,6 +46,7 @@ import { AuthModule } from './modules/auth/auth.module';
 
 
 
+
 const routes: Routes = [
   /*{ path: 'sesion', component: SesionComponent  },
   { path: 'cart', component: CartComponent  },
@@ -124,7 +125,6 @@ const routes: Routes = [
     CardFormComponent,
     PipeCardPipe,
     MainComponent,
-
 
 
   ],
