@@ -1,6 +1,6 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { NgxPermissionsModule } from 'ngx-permissions';
+
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -37,15 +37,35 @@ import { CardUpdateComponent } from './components/card-update/card-update.compon
 import { CardFormComponent } from './components/card/card-form.component';
 import { PipeCardPipe } from './pipe-card/pipe-card.pipe';
 import { MainComponent } from './main/main.component';
+import { AuthModule } from './modules/auth/auth.module';
+import { LoginComponent } from './modules/auth/login/login.component';
 
 const routes: Routes = [
 
   {
     path: '',
-    component: HomeComponent,
-
+    pathMatch: 'full',
+    component: HomeComponent
   },
+
   //LOGIN
+
+  {
+    path: 'auth',
+    redirectTo: '/auth/login',
+    pathMatch: 'full'
+  },
+ /* {
+    path:'auth',
+    loadChildren: () =>
+    import('@modules/auth/auth.module').then((m) => m.AuthModule)
+
+  },*/
+
+  {  path: 'auth',loadChildren: 'src/app/modules/auth/auth.modules#AuthModule' },
+ // { path: 'auth', loadChildren: 'src/app/auth/auth.module#AuthModule' },
+
+
   {
     path:'user-login',
     component: UserLoginComponent,
@@ -93,6 +113,11 @@ const routes: Routes = [
           {
             path:'order/:id',
             component: OrderComponent,
+          },
+
+          {
+            path:'card',
+            component: CardComponent,
           },
 
           {
@@ -217,14 +242,15 @@ const routes: Routes = [
         path:'list-clients/profile-client/:id',
         component: ProfileClientComponent,
       },
-
-
-
+      {  path: 'receipt',
+      component: ReceiptComponent,
+      },
 
 
 
   //  ],
  // },
+
 
 
 ];

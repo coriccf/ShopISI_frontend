@@ -42,6 +42,9 @@ import { CardFormComponent } from './components/card/card-form.component';
 import { PipeCardPipe } from './pipe-card/pipe-card.pipe';
 import { NgxPermissionsModule } from 'ngx-permissions';
 import { MainComponent } from './main/main.component';
+import { AuthModule } from './modules/auth/auth.module';
+
+
 
 
 
@@ -51,6 +54,7 @@ const routes: Routes = [
   { path: 'products', component: ProductsComponent  },
   { path: 'pedidos', component: PedidosComponent  },
   { path: 'pedidos-admin', component: PedidosAdminComponent  },
+
   { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'products/form', component: FormProductComponent, pathMatch: 'full' },
   { path: 'products/form/:id', component: FormProductComponent, pathMatch: 'full' },

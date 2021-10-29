@@ -1,4 +1,4 @@
-export class Cart {
+export class productCart{
 
   cart_id: number=0;
   product_id: number=0;

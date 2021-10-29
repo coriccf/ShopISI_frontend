@@ -2,6 +2,8 @@ import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
 import { Card } from "./card";
 import { CardService } from "./card.service";
+import { User } from "../sesion/user";
+import { UserService } from "../sesion/user.service";
 
 @Component({
   selector: 'app-card-form',

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Cart } from './cart';
+import { CartService } from './cart.service';
 import { Product } from './product';
 import { ProductService } from './product.service';
 
@@ -9,16 +11,29 @@ import { ProductService } from './product.service';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
+  [x: string]:any;
   filterPost='';
 
-  product!: Product[];
+  cart!: Cart[];
+  cartTotal: any[] = [];
+  product: Array<Product> = [];
 
-  constructor(private productService: ProductService) { }
+  itemValue = {
+    cartDetailId:0
+  }
+
+  constructor(private productService: ProductService, cartService: CartService) { }
 
   ngOnInit(): void {
     this.productService.getAll().subscribe(
       p => this.product=p
     );
+  }
+
+  get(cart: Cart):void{
+    console.log("get");
+   // this.cartTotal = data;
+    console.log(this.cartTotal);
   }
 
   delete(product: Product):void{
@@ -48,18 +63,7 @@ export class CartComponent implements OnInit {
     );
 
   }
-  /*
-   update():void{
-    this.productService.update(this.product).subscribe(
-      e=> this.router.navigate(['/products'])
-    );
-  }
-  create():void{
-    console.log(this.product);
-    this.productService.create(this.product).subscribe(
-      res=> this.router.navigate(['/products'])
-    );
-}*/
+
 
 }
 
