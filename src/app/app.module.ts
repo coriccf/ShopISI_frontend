@@ -41,6 +41,9 @@ import { CardFormComponent } from './components/card/card-form.component';
 import { PipeCardPipe } from './pipe-card/pipe-card.pipe';
 import { NgxPermissionsModule } from 'ngx-permissions';
 import { MainComponent } from './main/main.component';
+import { AuthModule } from './modules/auth/auth.module';
+
+
 
 
 const routes: Routes = [
@@ -121,6 +124,8 @@ const routes: Routes = [
     CardFormComponent,
     PipeCardPipe,
     MainComponent,
+
+
 
   ],
   imports: [
