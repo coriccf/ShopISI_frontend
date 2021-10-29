@@ -242,6 +242,11 @@ const routes: Routes = [
         path:'list-clients/profile-client/:id',
         component: ProfileClientComponent,
       },
+      {  path: 'receipt',
+      component: ReceiptComponent,
+      },
+
+
 
   //  ],
  // },
