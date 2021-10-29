@@ -10,7 +10,7 @@
 
       <div class="col-md-6 position-relative"><br><br>
         <label for="inputCardname">Nombre</label>
-        <input type= "text" class="form-control" id="inputNamecard" name="card_name"
+        <input type= "text" [(ngModel)]="card.card_name" class="form-control" id="inputNamecard" name="card_name"
         ngModel  #card_name="ngModel"
         [class.is-invalid]="card_name.invalid && card_name.touched"
         minlength="1"
@@ -21,7 +21,7 @@
 
       <div class="col-md-6 position-relative"><br><br>
         <label for="inputLastname">Número de tarjeta</label>
-        <input type="text" class="form-control" id="inputCardNumber" name="card_number" ngModel #card_number="ngModel"
+        <input type="text" [(ngModel)]="card.card_number" class="form-control" id="inputCardNumber" name="card_number" ngModel #card_number="ngModel"
         [class.is-invalid]="card_number.invalid && card_number.touched"
         minlength="10"
         pattern="^\+?\d{10,}"
@@ -31,7 +31,7 @@
 
     <div class="col-md-6 position-relative">
           <label for="inputExpirationYear">Año de expiración</label>
-          <input type="text" class="form-control" id="inputExpirationyear" name="expiration_year" ngModel #expiration_year="ngModel"
+          <input type="text" [(ngModel)]="card.expiration_year" class="form-control" id="inputExpirationyear" name="expiration_year" ngModel #expiration_year="ngModel"
           [class.is-invalid]="expiration_year.invalid && expiration_year.touched"
           minlength="4"
           pattern="^\+?\d{4,}"
@@ -41,7 +41,7 @@
 
   <div class="col-md-6 position-relative">
     <label for="inputExpirationMonth">Mes de expiración</label>
-    <select id = "inputExpirationMonth" id="inputExpirationmonth" name="expiration_month" style="margin: 10px" ngModel #expiration_month="ngModel"
+    <select id = "inputExpirationMonth" id="inputExpirationmonth" [(ngModel)]="card.expiration_month" name="expiration_month" style="margin: 10px" ngModel #expiration_month="ngModel"
     [class.is-invalid]="expiration_month.invalid && expiration_month.touched"
     required >
       <option selected>Enero</option>
@@ -63,7 +63,7 @@
 
   <div class="col-md-6 position-relative">
     <label for="inputPhone">CVC</label>
-                <input type="text" class="form-control" id="cvc" name="cvc" ngModel #cvc="ngModel"
+                <input type="text" [(ngModel)]="card.cvc" class="form-control" id="cvc" name="cvc" ngModel #cvc="ngModel"
                 [class.is-invalid]="cvc.invalid && cvc.touched"
                 minlength="3"
                 pattern="^\+?\d{3,}"

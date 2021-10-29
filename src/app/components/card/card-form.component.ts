@@ -12,7 +12,7 @@ import { UserService } from "../sesion/user.service";
 })
 export class CardFormComponent implements OnInit{
   card_id: number=0;
-  user_id: number=0;
+  // user_id: number=0;
   card_name: string="";
   card_number: number=0;
   expiration_year: number=0;
@@ -21,7 +21,7 @@ export class CardFormComponent implements OnInit{
   creation_date: string="";
   status: number=0;
 
-  card: Card = new Card(this.card_id, this.user_id, this.card_name, this.card_number, this.expiration_year, this.expiration_month, this.cvc, this.creation_date, this.status);
+  card: Card = new Card(this.card_id, this.card_name, this.card_number, this.expiration_year, this.expiration_month, this.cvc, this.creation_date, this.status);
 
   constructor(private cardService: CardService, private router: Router, private activatedRoute: ActivatedRoute){ }
 
