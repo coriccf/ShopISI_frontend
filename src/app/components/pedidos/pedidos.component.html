@@ -20,33 +20,57 @@
                       <div class="py-2 text-uppercase" style="color: white;">Producto</div>
                     </th>
                     <th scope="col" class="border-0 bg-dark" >
-                      <div class="py-2 text-uppercase" style="color: white;">color</div>
+                      <div class="py-2 text-uppercase" style="color: white;">Cantidad</div>
                     </th>
                     <th scope="col" class="border-0 bg-dark">
-                      <div class="py-2 text-uppercase" style="color: white;">Talla</div>
+                      <div class="py-2 text-uppercase" style="color: white;">Estado del pedido</div>
+                    </th>
+                    <th scope="col" class="border-0 bg-dark">
+                      <div class="py-2 text-uppercase" style="color: white;">Accion</div>
                     </th>
               
                   </tr>
                 </thead>
   
   
-                <tbody *ngFor="let product of product">
+                <tbody *ngFor="let pedido of pedido">
                   <tr>
                     <th scope="row" class="border-0">
                       <div class="py-2">
                         <img src="https://cdn.shopify.com/s/files/1/0028/9597/0349/products/BLUSA8_1024x.jpg" width="70" class="img-fluid rounded shadow-sm" alt="" >
                         <div class="ml-3 d-inline-block align-middle">
-                          <h5 class="mb-0"> <a class="text-dark font-wight-bolde align-middle">{{product.product_name}}</a></h5>
+                          <h5 class="mb-0"> <a class="text-dark font-wight-bolde align-middle" *ngFor = "let prod of products" >{{prod.product_name}}</a></h5>
         
-                          <span class="text-muted font-weight-normal font-italic d-block">Talla: {{product.size}}</span>
-                          <span class="text-muted font-weight-normal font-italic d-block">Color: {{product.color}}</span>
+                          <span class="text-muted font-weight-normal font-italic d-block">Talla: {{pedido.user_id}}</span>
+                          <span class="text-muted font-weight-normal font-italic d-block">Color: {{pedido.order_status_status_id}}</span>
                         </div>
                       </div>
                     </th>
-                    <td class="border-0 align-middle"><strong> {{product.color}}</strong></td>
-                    <td class="border-0 align-middle"><strong>{{product.size}}</strong></td>
-  
+                    <td class="border-0 align-middle"><strong> {{pedido.cantidad}}</strong></td>
                  
+                      <td class="align-middle" *ngIf="pedido.order_status_status_id==1" style="color:#000000  "><strong>PENDIENTE</strong></td>
+                      <td class="align-middle" *ngIf="pedido.order_status_status_id==2" style="color:#000000  "><strong>ACEPTADO</strong></td>
+                      <td class="align-middle" *ngIf="pedido.order_status_status_id==3" style="color:#000000  "><strong>EN FABRICACION</strong></td>
+                      <td class="align-middle" *ngIf="pedido.order_status_status_id==4" style="color:#000000  "><strong>ENVIADO</strong></td>
+                      <td class="align-middle" *ngIf="pedido.order_status_status_id==5" style="color:#000000  "><strong>FINALIZADO</strong></td>
+                      <div  style="margin: 30px">
+
+
+                        <button *ngIf="pedido.order_status_status_id == 1" class="btn btn-success" style="margin: 10px" type="btnEdit" [routerLink]="['/order']">Editar</button>
+                        
+                        <td class="align-middle" *ngIf="pedido.order_status_status_id==2 " style="color:#000000  "><strong>------</strong></td>
+                        <td class="align-middle" *ngIf="pedido.order_status_status_id==3 " style="color:#000000 "><strong>------</strong></td>
+                        <td class="align-middle" *ngIf="pedido.order_status_status_id==4 " style="color:#000000  "><strong>------</strong></td>
+                        <td class="align-middle" *ngIf="pedido.order_status_status_id==5 " style="color:#000000  "><strong>------</strong></td>
+                      
+                      <button *ngIf="pedido.order_status_status_id == 1" type="button" class="btn btn-danger" 
+                      mwlConfirmationPopover
+                    [popoverTitle]="popoverTitle"
+           [popoverMessage]="popoverMessage"
+           placement= "left"
+           (confirm)="delete(pedido)"
+           (cancel)= "cancelClicked = true">Eliminar</button>
+          </div>
                   </tr>
                 </tbody>
               </table>

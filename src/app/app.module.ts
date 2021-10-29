@@ -35,11 +35,13 @@ import { ConfirmationPopoverModule} from 'angular-confirmation-popover';
 import { PedidosComponent } from './components/pedidos/pedidos.component';
 
 
+
 const routes: Routes = [
   { path: 'sesion', component: SesionComponent  },
   { path: 'cart', component: CartComponent  },
   { path: 'products', component: ProductsComponent  },
   { path: 'pedidos', component: PedidosComponent  },
+
   
   { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'products/form', component: FormProductComponent, pathMatch: 'full' },
@@ -97,6 +99,7 @@ const routes: Routes = [
     ProfileClientComponent,
     ClientEditComponent,
     PedidosComponent,
+
 
 
 

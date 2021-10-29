@@ -31,6 +31,7 @@ export class ProductsComponent implements OnInit {
     );
   }
 
+ 
   delete(product:Product):void{
     console.log("Delege");
     this.productService.delete(product.product_id).subscribe(

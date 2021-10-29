@@ -1,7 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Product } from './product';
-import { ProductService } from './product.service';
+import { Pedido } from './pedidos';
+import { PedidoService } from './pedidos.service';
+import { ProductService } from '../products/product.service'
+import { CategoriaService } from '../categorias/categoria.service';
+import { Product } from '../products/product';
+import { Categoria } from '../categorias/categoria';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-pedidos',
@@ -9,33 +14,68 @@ import { ProductService } from './product.service';
   styleUrls: ['./pedidos.component.css']
 })
 export class PedidosComponent implements OnInit {
+  [x: string]: any;
   
-  product!: Product[];
+  pedido!: Pedido[];
+  products!: Product[];
+  categoria: Array<Categoria>=[];
 
-  constructor(private productService: ProductService) { }
+
+  constructor(private http: HttpClient, private pedidoService: PedidoService, private productService:ProductService, private categoriaService:CategoriaService) { }
+
+  
 
   ngOnInit(): void {
-    this.productService.getAll().subscribe(
-      p => this.product=p
+   
+     
+    this.pedidoService.getAll().subscribe(
+      pe => this.pedido = pe
     );
+
+    // this.productService.getAll().subscribe(
+    //   p => this.products=p
+    // );
+    this.categoriaService.getAll().subscribe(
+      c => this.categoria=c
+    );
+    
+    this.http.get('http://localhost:8081/producto/id')
+    .subscribe((data: any) => {
+      this.products = data;
+      console.log(this.products);
+      }
+    )
   }
-  update(product:Product){
+
+  update(pedido:Pedido){
     console.log("Update");
-    this.productService.update(product).subscribe(
-      res=>this.productService.getAll().subscribe(
-        response=>this.product=response
+    this.pedidoService.update(pedido).subscribe(
+      res=>this.pedidoService.getAll().subscribe(
+        response=>this.pedido=response
       )
     );
   }
+  delete(pedido:Pedido):void{
+    console.log("Delete");
+    this.pedidoService.delete(pedido.order_id).subscribe(
+      res=> this.pedidoService.getAll().subscribe(
+        response=> this.pedido=response
+      )
+    );
+  
+  }
 
-  create(product: Product){
+  create(pedido: Pedido){
     console.log("Create");
-    this.productService.create(product).subscribe(
-      res=>this.productService.getAll().subscribe(
-        response=>this.product=response
+    this.pedidoService.create(pedido).subscribe(
+      res=>this.pedidoService.getAll().subscribe(
+        response=>this.pedido=response
       )
     );
 
   }
+
+
+
 
 }
