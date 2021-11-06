@@ -37,12 +37,13 @@ import { PedidosAdminComponent } from './components/pedidos-admin/pedidos-admin.
 import { UserLoginComponent } from './components/user/user-login/user-login.component';
 import { CardComponent } from './components/card/card.component';
 import { ReceiptComponent } from './components/receipt/receipt.component';
-import { CardUpdateComponent } from './components/card-update/card-update.component';
-import { CardFormComponent } from './components/card/card-form.component';
 import { PipeCardPipe } from './pipe-card/pipe-card.pipe';
 import { NgxPermissionsModule } from 'ngx-permissions';
 import { MainComponent } from './main/main.component';
 import { AuthModule } from './modules/auth/auth.module';
+import { CardUpdateComponent } from './components/card-update/card-update.component';
+import { CardFormComponent } from './components/card/card-form.component';
+
 
 
 
@@ -84,10 +85,8 @@ const routes: Routes = [
   { path: 'card', component: CardComponent, pathMatch: 'full'},
   { path: 'card/:id', component: CardComponent, pathMatch: 'full'},
   { path: 'receipt', component: ReceiptComponent, pathMatch: 'full'},
-  { path: 'card/card-form', component: CardFormComponent,pathMatch:'full'},
-  { path: 'card/card-form/:id', component: CardFormComponent,pathMatch:'full'},
-  { path: 'card-update', component: CardUpdateComponent, pathMatch:'full'},
-  { path: 'card-update/:id', component: CardUpdateComponent, pathMatch:'full'},
+  {path: 'card/card-form', component: CardFormComponent, pathMatch: 'full'},
+  {path: 'card/card-form/:id', component: CardFormComponent, pathMatch: 'full'},
 
 
   { path: '', redirectTo: '/', pathMatch: 'full' },
@@ -124,10 +123,11 @@ const routes: Routes = [
     UserLoginComponent,
     CardComponent,
     ReceiptComponent,
-    CardUpdateComponent,
-    CardFormComponent,
     PipeCardPipe,
     MainComponent,
+    CardUpdateComponent,
+    CardFormComponent,
+
 
 
   ],

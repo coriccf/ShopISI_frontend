@@ -33,12 +33,11 @@ import { PedidosComponent } from './components/pedidos/pedidos.component';
 import { UserLoginComponent } from './components/user/user-login/user-login.component';
 import { CardComponent } from './components/card/card.component';
 import { ReceiptComponent } from './components/receipt/receipt.component';
-import { CardUpdateComponent } from './components/card-update/card-update.component';
-import { CardFormComponent } from './components/card/card-form.component';
 import { PipeCardPipe } from './pipe-card/pipe-card.pipe';
 import { MainComponent } from './main/main.component';
 import { AuthModule } from './modules/auth/auth.module';
 import { LoginComponent } from './modules/auth/login/login.component';
+import { CardFormComponent } from './components/card/card-form.component';
 
 const routes: Routes = [
 
@@ -124,22 +123,12 @@ const routes: Routes = [
             path:'cart/card',
             component: CardComponent,
           },
+
           {
-            path:'card/card-form',
+            path: 'card/card-form',
             component: CardFormComponent,
           },
-          {
-            path:'card/card-form/:id',
-            component: CardFormComponent,
-          },
-          {
-            path:'card-update',
-            component: CardUpdateComponent,
-          },
-          {
-            path:'card-update/:id',
-            component: CardUpdateComponent,
-          },
+
 
           {
             path:'user-update',
