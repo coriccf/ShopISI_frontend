@@ -48,7 +48,7 @@ create():void{
 
 update():void{
   this.cardService.update(this.card).subscribe(
-    e=>this.router.navigate(['/card'])
+    e=>this.router.navigate(['/card-update'])
   );
 }
 

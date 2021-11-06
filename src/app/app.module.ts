@@ -87,7 +87,8 @@ const routes: Routes = [
   { path: 'receipt', component: ReceiptComponent, pathMatch: 'full'},
   {path: 'card/card-form', component: CardFormComponent, pathMatch: 'full'},
   {path: 'card/card-form/:id', component: CardFormComponent, pathMatch: 'full'},
-
+  {path: 'card-update', component: CardUpdateComponent, pathMatch: 'full'},
+  {path: 'card-update/:id', component: CardUpdateComponent, pathMatch: 'full'},
 
   { path: '', redirectTo: '/', pathMatch: 'full' },
 ];
