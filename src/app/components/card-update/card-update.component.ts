@@ -42,13 +42,13 @@ cargar():void{
 create():void{
   console.log(this.card);
   this.cardService.create(this.card).subscribe(
-    res=> this.router.navigate(['/card/card-form'])
+    res=> this.router.navigate(['/card'])
   );
 }
 
 update():void{
   this.cardService.update(this.card).subscribe(
-    e=>this.router.navigate(['/card-update'])
+    e=>this.router.navigate(['/card'])
   );
 }
 
