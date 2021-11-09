@@ -15,7 +15,7 @@ export class CategoriasComponent implements OnInit {
   public popoverMessage: string= 'Esta seguro que desea eliminar el producto?';
 
   filterPost='';
-  categoria_id: number=0;
+  categoria_id: number=5;
       nombre: string= "";
       status: boolean=true;
       categoria:Categoria= new Categoria(this.categoria_id,this.nombre, this.status); 

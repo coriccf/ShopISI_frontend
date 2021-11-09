@@ -12,7 +12,7 @@ import { Categoria } from '../categorias/categoria';
 })
 export class FormProductComponent implements OnInit {
 
-  categoria: Array<Categoria>=[];
+  categoria: Categoria | undefined;
       product_id: number=0;
       product_name: string= "";
       details: string="";
@@ -29,8 +29,12 @@ export class FormProductComponent implements OnInit {
     imagen_id:number[]=[];
     cont:number=0;
     categoria_categoria_id: number=0;
+    image: any="";
+
+    fileData: File | undefined ;
+    imageBase64:any="";
       
-      product:Product= new Product(this.product_id,this.product_name, this.details, this.size, this.color, this.costProduct, this.stock, this.categoria_categoria_id); 
+      product:Product= new Product(this.product_id,this.product_name, this.details, this.size, this.color, this.costProduct, this.stock, this.categoria_categoria_id, this.image); 
       // , this.imagen_id
       titulo:string="Registro de nuevo producto";
 
@@ -58,16 +62,43 @@ export class FormProductComponent implements OnInit {
   // }
 
   update():void{
+    this.product.image=(this.imageBase64!='')?this.imageBase64:this.product.image;
     this.productService.update(this.product).subscribe(
       e=> this.router.navigate(['/products'])
     );
   }
+
+
+
   create():void{
     console.log(this.product);
+    this.product.image=this.imageBase64;
     this.productService.create(this.product).subscribe(
       res=> this.router.navigate(['/products'])
     );
 }
+
+postMethod(event:any){
+  this.fileData =<File> event.target.files[0];
+  var mimeType = this.fileData.type;
+  if (mimeType.match(/image\/*/) == null) {
+    return;
+  }
+
+  var reader = new FileReader();
+  reader.readAsDataURL(this.fileData);
+  reader.onload = (_event) => {
+    this.imageBase64 = reader.result;
+   
+    
+  
+  };
+
+  
+  
+}
+
+
 
   selectFiles(event:any):void{
     this.progressInfo=[];

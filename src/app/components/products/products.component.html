@@ -14,6 +14,7 @@
         <thead>
           <tr>
         <th scope="col">#</th>
+        <th scope="col">Imagen</th>
         <th scope="col">Producto</th>
         <th scope="col">Detalles</th>
         <th scope="col">Talla</th>
@@ -29,6 +30,10 @@
     <tbody>
       <tr *ngFor="let product of products">
         <th scope="row">{{product.product_id}}</th>
+        <td>
+
+          <img width="50" [src]="product.image" alt="">
+        </td>
         <td>{{product.product_name}}</td>
         <td>{{product.details}}</td>
         <td>{{product.size}}</td>
