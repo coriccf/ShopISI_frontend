@@ -39,6 +39,8 @@ import { AuthModule } from './modules/auth/auth.module';
 import { LoginComponent } from './modules/auth/login/login.component';
 import { CardFormComponent } from './components/card/card-form.component';
 import { CardUpdateComponent } from './components/card-update/card-update.component';
+import { ProbadorVirtualComponent } from './components/probador-virtual/probador-virtual.component';
+import { Receipt } from './components/receipt/receipt';
 
 const routes: Routes = [
 
@@ -161,6 +163,20 @@ const routes: Routes = [
           {
             path:'pedidos',
             component: PedidosComponent,
+          },
+
+          {
+            path:'receipt',
+            component: ReceiptComponent,
+          },
+
+          {
+            path:'probador-virtual',
+            component: ProbadorVirtualComponent,
+          },
+          {
+            path: 'profile-client',
+            component: ProfileClientComponent,
           },
 
   //  ],

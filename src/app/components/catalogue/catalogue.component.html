@@ -44,7 +44,7 @@
     <div class="row row-cols-1 row-cols-md-3 g-4" >
       <div class="col md 8" style="width: 18rem;" *ngFor="let product of product | filter: filterPost | filterCategoria: filterCategoria | filterPrecio: filterPrecio " >
         <div class="card">
-          <img [src]="product.image"  class="card-img-top" class="zoom" style="width: 100%; height: 337px; object-fit: cover;"  alt="...">
+          <img [src]="product.image"  class="card-img-top" class="zoom" style="width: 100%; height: 337px; object-fit: contain;"  alt="...">
 
                  <div class="card-body">
             <a class="card-link"style="font-size: 17px; color: black;" [routerLink]="['/catalogue/product-details',product.product_id]">{{product.product_name}}</a>

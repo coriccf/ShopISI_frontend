@@ -43,6 +43,7 @@ import { MainComponent } from './main/main.component';
 import { AuthModule } from './modules/auth/auth.module';
 import { CardUpdateComponent } from './components/card-update/card-update.component';
 import { CardFormComponent } from './components/card/card-form.component';
+import { ProbadorVirtualComponent } from './components/probador-virtual/probador-virtual.component';
 
 
 
@@ -89,6 +90,7 @@ const routes: Routes = [
   {path: 'card/card-form/:id', component: CardFormComponent, pathMatch: 'full'},
   {path: 'card-update', component: CardUpdateComponent, pathMatch: 'full'},
   {path: 'card-update/:id', component: CardUpdateComponent, pathMatch: 'full'},
+  {path: 'probador-virtual', component: ProbadorVirtualComponent, pathMatch: 'full'},
 
   { path: '', redirectTo: '/', pathMatch: 'full' },
 ];
@@ -128,6 +130,7 @@ const routes: Routes = [
     MainComponent,
     CardUpdateComponent,
     CardFormComponent,
+    ProbadorVirtualComponent,
 
 
 

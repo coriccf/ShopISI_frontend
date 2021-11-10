@@ -43,12 +43,7 @@
 
             <div class="form-inline" style="margin: 10px">
               <h5 for ="quantity" >Cantidad</h5>
-              <input type="text" class="form-control" id="inputquantity" name="quantity" ngModel #quantity="ngModel"
-                    [class.is-invalid]="quantity.invalid && quantity.touched"
-                    minlength="6"
-                    pattern="^\+?\d{3,}"
-                    required >
-                <small class="form-text text-danger" *ngIf="quantity.invalid && quantity.touched">El campo es obligatorio</small>
+              <input type="text" class="form-control" id="inputquantity" name="quantity" [(ngModel)]="product.quantity">
 
           </div>
 
