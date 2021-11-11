@@ -41,6 +41,7 @@ import { CardFormComponent } from './components/card/card-form.component';
 import { CardUpdateComponent } from './components/card-update/card-update.component';
 import { ProbadorVirtualComponent } from './components/probador-virtual/probador-virtual.component';
 import { Receipt } from './components/receipt/receipt';
+import { ReporteProductosComponent } from './components/reports/reporte-productos/reporte-productos.component';
 
 const routes: Routes = [
 
@@ -177,6 +178,12 @@ const routes: Routes = [
           {
             path: 'profile-client',
             component: ProfileClientComponent,
+          },
+
+          {
+            path: 'reporte-productos',
+            component: ReporteProductosComponent,
+
           },
 
   //  ],

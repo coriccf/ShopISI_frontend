@@ -1,0 +1,55 @@
+<div class="px-4 px-lg-0">
+
+  <div class="container text-white py-5 text-center">
+    <h1 style="color: black;">Productos más pedidos</h1>
+  </div>
+
+  <div class="pb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 p-5 bg-white rounded shadow-sm mb-5">
+
+          <div class="table-responsive " style="font-size: 16px;">
+
+            <table class="table align-middle">
+
+              <thead>
+                <tr>
+                  <th scope="col" class="border-0 bg-dark">
+                    <div class="py-2 text-uppercase" style="color: white;">Producto</div>
+                  </th>
+
+                  <th scope="col" class="border-0 bg-dark">
+                    <div class="py-2 text-uppercase" style="color: white;">Cantidad de pedidos</div>
+                  </th>
+                </tr>
+              </thead>
+
+
+              <tbody *ngFor="let product of product">
+                <tr>
+                  <th scope="row" class="border-0">
+                    <div class="py-2">
+                      <img src="https://cdn.shopify.com/s/files/1/0028/9597/0349/products/BLUSA8_1024x.jpg" width="70" class="img-fluid rounded shadow-sm" alt="" >
+                      <div class="ml-3 d-inline-block align-middle">
+                        <h5 class="mb-0"> <a class="text-dark font-wight-bolde align-middle">{{product.product_name}}</a></h5>
+                        <span class="text-muted font-weight-normal font-italic d-block">Detalles: {{product.details}}</span>
+                        <span class="text-muted font-weight-normal font-italic d-block">Talla: {{product.size}}</span>
+
+                      </div>
+                    </div>
+                  </th>
+                  <td class="border-0 align-middle"><strong>{{product}}</strong></td>
+               </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+
+
+
+    </div>
+  </div>
+
