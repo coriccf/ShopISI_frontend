@@ -46,6 +46,7 @@ import { CardFormComponent } from './components/card/card-form.component';
 import { ProbadorVirtualComponent } from './components/probador-virtual/probador-virtual.component';
 import { ReporteProductosComponent } from './components/reports/reporte-productos/reporte-productos.component';
 import { ProductBuyComponent } from './components/product-buy/product-buy.component';
+import { MostBougthComponent } from './components/most-bougth/most-bougth.component';
 
 
 
@@ -95,6 +96,7 @@ const routes: Routes = [
   {path: 'probador-virtual', component: ProbadorVirtualComponent, pathMatch: 'full'},
   {path: 'reporte-productos', component: ReporteProductosComponent, pathMatch: 'full'},
   {path: 'product-buy', component: ProductBuyComponent, pathMatch: 'full'},
+  {path: 'most-bougth', component: MostBougthComponent, pathMatch: 'full'},
 
   { path: '', redirectTo: '/', pathMatch: 'full' },
 ];
@@ -137,6 +139,7 @@ const routes: Routes = [
     ProbadorVirtualComponent,
     ReporteProductosComponent,
     ProductBuyComponent,
+    MostBougthComponent,
 
 
 

@@ -43,6 +43,7 @@ import { ProbadorVirtualComponent } from './components/probador-virtual/probador
 import { Receipt } from './components/receipt/receipt';
 import { ReporteProductosComponent } from './components/reports/reporte-productos/reporte-productos.component';
 import { ProductBuyComponent } from './components/product-buy/product-buy.component';
+import { MostBougthComponent } from './components/most-bougth/most-bougth.component';
 
 const routes: Routes = [
 
@@ -271,6 +272,11 @@ const routes: Routes = [
       {  path: 'product-buy',
       component: ProductBuyComponent,
       },
+      {
+        path: 'most-bougth',
+        component: MostBougthComponent, 
+      },
+     
       
 
 
