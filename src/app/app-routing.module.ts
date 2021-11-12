@@ -42,6 +42,7 @@ import { CardUpdateComponent } from './components/card-update/card-update.compon
 import { ProbadorVirtualComponent } from './components/probador-virtual/probador-virtual.component';
 import { Receipt } from './components/receipt/receipt';
 import { ReporteProductosComponent } from './components/reports/reporte-productos/reporte-productos.component';
+import { ProductBuyComponent } from './components/product-buy/product-buy.component';
 
 const routes: Routes = [
 
@@ -267,6 +268,10 @@ const routes: Routes = [
       {  path: 'receipt',
       component: ReceiptComponent,
       },
+      {  path: 'product-buy',
+      component: ProductBuyComponent,
+      },
+      
 
 
 

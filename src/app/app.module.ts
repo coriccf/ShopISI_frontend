@@ -94,6 +94,7 @@ const routes: Routes = [
   {path: 'card-update/:id', component: CardUpdateComponent, pathMatch: 'full'},
   {path: 'probador-virtual', component: ProbadorVirtualComponent, pathMatch: 'full'},
   {path: 'reporte-productos', component: ReporteProductosComponent, pathMatch: 'full'},
+  {path: 'product-buy', component: ProductBuyComponent, pathMatch: 'full'},
 
   { path: '', redirectTo: '/', pathMatch: 'full' },
 ];
