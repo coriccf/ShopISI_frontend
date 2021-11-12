@@ -41,9 +41,10 @@ import { CardFormComponent } from './components/card/card-form.component';
 import { CardUpdateComponent } from './components/card-update/card-update.component';
 import { ProbadorVirtualComponent } from './components/probador-virtual/probador-virtual.component';
 import { Receipt } from './components/receipt/receipt';
-import { ReporteProductosComponent } from './components/reports/reporte-productos/reporte-productos.component';
 import { ProductBuyComponent } from './components/product-buy/product-buy.component';
 import { MostBougthComponent } from './components/most-bougth/most-bougth.component';
+import { MoreOrderComponent } from './components/reports/more-order/more-order.component';
+import { LessOrderComponent } from './components/reports/less-order/less-order.component';
 
 const routes: Routes = [
 
@@ -182,11 +183,6 @@ const routes: Routes = [
             component: ProfileClientComponent,
           },
 
-          {
-            path: 'reporte-productos',
-            component: ReporteProductosComponent,
-
-          },
 
   //  ],
  // },
@@ -274,7 +270,7 @@ const routes: Routes = [
       },
       {
         path: 'most-bougth',
-        component: MostBougthComponent, 
+        component: MostBougthComponent,
       },
       {
         path:'product-buy/most-bougth',
@@ -284,8 +280,26 @@ const routes: Routes = [
         path:'product-buy/most-bougth/:id',
         component: MostBougthComponent,
       },
-     
-      
+
+      {
+        path: 'more-order',
+        component: MoreOrderComponent
+      },
+      {
+        path: 'more-order/:id',
+        component: MoreOrderComponent
+      },
+
+      {
+        path: 'less-order',
+        component: LessOrderComponent
+      },
+      {
+        path: 'less-order/:id',
+        component: LessOrderComponent
+      },
+
+
 
 
 

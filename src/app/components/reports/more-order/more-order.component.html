@@ -26,20 +26,20 @@
               </thead>
 
 
-              <tbody *ngFor="let product of product">
+              <tbody *ngFor="let pedido of  pedido">
                 <tr>
                   <th scope="row" class="border-0">
                     <div class="py-2">
                       <img src="https://cdn.shopify.com/s/files/1/0028/9597/0349/products/BLUSA8_1024x.jpg" width="70" class="img-fluid rounded shadow-sm" alt="" >
                       <div class="ml-3 d-inline-block align-middle">
-                        <h5 class="mb-0"> <a class="text-dark font-wight-bolde align-middle">{{product.product_name}}</a></h5>
-                        <span class="text-muted font-weight-normal font-italic d-block">Detalles: {{product.details}}</span>
-                        <span class="text-muted font-weight-normal font-italic d-block">Talla: {{product.size}}</span>
+                        <h5 class="mb-0"> <a class="text-dark font-wight-bolde align-middle">{{pedido.product_name}}</a></h5>
+                        <span class="text-muted font-weight-normal font-italic d-block">Detalles: {{pedido.details}}</span>
+                        <span class="text-muted font-weight-normal font-italic d-block">Talla:{{pedido.size}}</span>
 
                       </div>
                     </div>
                   </th>
-                  <td class="border-0 align-middle"><strong>{{product}}</strong></td>
+                  <td class="border-0 align-middle">{{pedido.cantidad}}</td>
                </tr>
               </tbody>
             </table>

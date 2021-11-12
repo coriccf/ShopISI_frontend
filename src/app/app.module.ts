@@ -44,10 +44,10 @@ import { AuthModule } from './modules/auth/auth.module';
 import { CardUpdateComponent } from './components/card-update/card-update.component';
 import { CardFormComponent } from './components/card/card-form.component';
 import { ProbadorVirtualComponent } from './components/probador-virtual/probador-virtual.component';
-import { ReporteProductosComponent } from './components/reports/reporte-productos/reporte-productos.component';
 import { ProductBuyComponent } from './components/product-buy/product-buy.component';
 import { MostBougthComponent } from './components/most-bougth/most-bougth.component';
-
+import { MoreOrderComponent } from './components/reports/more-order/more-order.component';
+import { LessOrderComponent } from './components/reports/less-order/less-order.component';
 
 
 
@@ -94,9 +94,10 @@ const routes: Routes = [
   {path: 'card-update', component: CardUpdateComponent, pathMatch: 'full'},
   {path: 'card-update/:id', component: CardUpdateComponent, pathMatch: 'full'},
   {path: 'probador-virtual', component: ProbadorVirtualComponent, pathMatch: 'full'},
-  {path: 'reporte-productos', component: ReporteProductosComponent, pathMatch: 'full'},
   {path: 'product-buy', component: ProductBuyComponent, pathMatch: 'full'},
   {path: 'most-bougth', component: MostBougthComponent, pathMatch: 'full'},
+  { path: 'more-order', component: MoreOrderComponent,pathMatch: 'full'},
+  { path: 'less-order', component: LessOrderComponent, pathMatch: 'full'},
 
   { path: '', redirectTo: '/', pathMatch: 'full' },
 ];
@@ -137,9 +138,10 @@ const routes: Routes = [
     CardUpdateComponent,
     CardFormComponent,
     ProbadorVirtualComponent,
-    ReporteProductosComponent,
     ProductBuyComponent,
     MostBougthComponent,
+    MoreOrderComponent,
+    LessOrderComponent,
 
 
 
