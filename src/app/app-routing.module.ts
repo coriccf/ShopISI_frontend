@@ -276,6 +276,14 @@ const routes: Routes = [
         path: 'most-bougth',
         component: MostBougthComponent, 
       },
+      {
+        path:'product-buy/most-bougth',
+        component: MostBougthComponent,
+      },
+      {
+        path:'product-buy/most-bougth/:id',
+        component: MostBougthComponent,
+      },
      
       
 
