@@ -7,7 +7,7 @@ import { User} from './user';
   providedIn: 'root'
 })
 export class UserService{
-  private url:string="http://localhost:8081/user";
+  private url:string="http://localhost:8081/user/client";
 
   constructor(private http:HttpClient){}
 
@@ -16,26 +16,7 @@ export class UserService{
     return this.http.get<User[]>(this.url);
   }
 
-  //crear un usuario
-  create(user:User):Observable<User>{
-    return this.http.post<User>(this.url,user);
-  }
-
-  //obtener un usuario por id
-  get(id:number):Observable<User>{
-    return this.http.get<User>(this.url+'/'+id);
-  }
-
-  //actualizar un usuario
-  update(user:User):Observable<User>{
-    return this.http.put<User>(this.url,user);
-  }
-
-  //eliminar un usuario
-  delete(id:number):Observable<User>{
-    return this.http.delete<User>(this.url+'/'+id);
-  }
-
+ 
 
 }
 

@@ -1,44 +1,58 @@
-<div class="container-sm">
+<div class="px-4 px-lg-0">
 
-    <div class="card" style="width: 60rem;">
-      <div class="card-body">
+  <div class="container text-white py-5 text-center">
+    <h1 style="color: black;">Lista de Clientes</h1>
+  </div>
+   
+  <div class="pb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 p-5 bg-white rounded shadow-sm mb-5">
 
-        <div class="position-absolute start-50 translate-middle">
-          <h2 class="card-title"><b>Lista de clientes</b></h2>
+          <div class="table-responsive " style="font-size: 16px;">
+
+            <table class="table align-middle" >
+
+              <thead >
+                <tr>
+                  <th scope="col" class="border-0 bg-dark">
+                    <div class="py-2 text-uppercase" style="color: white;">Usuario</div>
+                  </th>
+
+                  <th scope="col" class="border-0 bg-dark">
+                    <div class="py-2 text-uppercase" style="color: white;"> Nombre </div>
+                  </th>
+
+                   <th scope="col" class="border-0 bg-dark">
+                    <div class="py-2 text-uppercase" style="color: white;">Correo</div>
+                  </th>
+
+                   <th scope="col" class="border-0 bg-dark">
+                    <div class="py-2 text-uppercase" style="color: white;">Acciones</div>
+                  </th>
+
+
+
+
+                </tr>
+              </thead>
+  <tbody *ngFor="let user of user">
+                <tr>
+                 
+                   <td class="border-0 align-middle"> {{user.username}} </td>
+                  <td class="border-0 align-middle">{{user.name}} {{user.lastname}} </td>
+                   <td class="border-0 align-middle"> {{user.email}}</td>
+                     <div>
+                         <button type="button"style="margin: 10px" name ="btnView" class="btn btn-info" [routerLink]="['/list-clients/profile-client', user.user_id]" >Ver Perfil</button>
+                        <button class="btn btn-success" style="margin: 10px" type="btnEdit" [routerLink]="['/list-clients/client-edit', user.user_id]">Editar</button>
+                  </div> 
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
-
-
-        <table class="table table-sm"  >
-          <thead  class="thead-ligth">
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Usuario</th>
-              <th scope="col">Nombre</th>
-              <th scope="col">Correo</th>
-              <th scope="col">Acciones</th>
-
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr *ngFor="let user of user">
-              <th scope="row">{{user.user_id}}</th>
-              <td>{{user.username}}</td>
-              <td>{{user.name}}</td>
-              <td>{{user.email}}</td>
-
-             <td>
-              <div>
-           <button type="button"style="margin: 10px" name ="btnView" class="btn btn-info" [routerLink]="['/list-clients/profile-client', user.user_id]" >Ver Perfil</button>
-            <button class="btn btn-success" style="margin: 10px" type="btnEdit" [routerLink]="['/list-clients/client-edit', user.user_id]">Editar</button>
-
-
-              </div>
-              </td>
-            </tr>
-          </tbody>
-
-        </table>
       </div>
-      </div>
+
+
+    </div>
   </div>
