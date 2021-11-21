@@ -45,6 +45,7 @@ import { ProductBuyComponent } from './components/product-buy/product-buy.compon
 import { MostBougthComponent } from './components/most-bougth/most-bougth.component';
 import { MoreOrderComponent } from './components/reports/more-order/more-order.component';
 import { LessOrderComponent } from './components/reports/less-order/less-order.component';
+import { PedirComponent } from './components/pedir/pedir.component';
 
 const routes: Routes = [
 
@@ -167,6 +168,14 @@ const routes: Routes = [
           {
             path:'pedidos',
             component: PedidosComponent,
+          },
+          {
+            path:'pedir',
+            component: PedirComponent
+          },
+          {
+            path:'pedir/id',
+            component: PedirComponent
           },
 
           {
