@@ -46,6 +46,7 @@ import { MostBougthComponent } from './components/most-bougth/most-bougth.compon
 import { MoreOrderComponent } from './components/reports/more-order/more-order.component';
 import { LessOrderComponent } from './components/reports/less-order/less-order.component';
 import { PedirComponent } from './components/pedir/pedir.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 const routes: Routes = [
 
