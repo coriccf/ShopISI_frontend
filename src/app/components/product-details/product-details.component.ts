@@ -15,7 +15,7 @@ export class ProductDetailsComponent implements OnInit {
   details: string="";
   size: string="";
   stock: number=0;
-  color: number=0;
+  color: string="";
   quantity:number=0;
   costProduct:number=0;
   status: number= 0;

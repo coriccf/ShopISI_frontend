@@ -50,6 +50,7 @@ import { MoreOrderComponent } from './components/reports/more-order/more-order.c
 import { LessOrderComponent } from './components/reports/less-order/less-order.component';
 import { PedirComponent } from './components/pedir/pedir.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -107,8 +108,10 @@ const routes: Routes = [
 
 
 
+
   { path: '', redirectTo: '/', pathMatch: 'full' },
 ];
+
 
 @NgModule({
 
@@ -166,7 +169,9 @@ const routes: Routes = [
     HttpClientModule,
     FormsModule,
     Ng5SliderModule,
-    NgxPermissionsModule.forRoot()
+    NgxPermissionsModule.forRoot(),
+    BrowserAnimationsModule,
+
 
 
   ],

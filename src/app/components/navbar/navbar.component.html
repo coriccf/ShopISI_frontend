@@ -1,5 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
-    <div class="container-fluid">
+
+  <div class="container-fluid">
 
 
 
@@ -11,9 +12,12 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">
              <img src="assets/img/logo3.png" width="100" height="100" class="d-inline-block align-top" alt="">
+             <br> ISI Virtual Shop
             </a>
           </li>
 
+        </ul>
+      </div>
 
 
    <li class="nav-item">
@@ -35,21 +39,7 @@
             </a>
           </li>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" [routerLink]="['/catalogue']">Catalogo
@@ -72,6 +62,8 @@
 
             </a>
           </li>
+        </ul>
+
 
   <li class="nav-item">
             <a class="nav-link active" aria-current="page" [routerLink]="['/user-admin']">Usuarios
@@ -110,13 +102,14 @@
           </li>
 
 
-           <li class="nav-item">
+          <li class="nav-item">
             <a class="nav-link active" aria-current="page" [routerLink]="['/product-buy']">Reporte Compras
 
             </a>
           </li>
-        </ul>
-      </div>
+
+
+
     </div>
 
              <!--*********************************************************************************-->
@@ -181,6 +174,14 @@
           </li>
 
 
+<li class="nav-item">
+  <a class="nav-link active" aria-current="page" [routerLink]="['/card']">Tarjetas
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-card-heading" viewBox="0 0 16 16">
+      <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+      <path d="M3 8.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm0-5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5v-1z"/>
+    </svg>
+  </a>
+</li>
             <li class="nav-item">
                 <a class="nav-link active" aria-current="page" [routerLink]="['/cart']">Carrito
 
@@ -192,7 +193,7 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" [routerLink]="['/sesion']">Cuenta
+                <a class="nav-link active" aria-current="page" [routerLink]="['/profile-client']">Cuenta
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-bounding-box" viewBox="0 0 16 16">
                         <path d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5z"/>
                         <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
@@ -212,6 +213,8 @@
               </li>
 
         </ul>
+<!--
+       -->
     </div>
 
   </nav>

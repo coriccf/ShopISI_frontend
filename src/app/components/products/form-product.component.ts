@@ -17,7 +17,7 @@ export class FormProductComponent implements OnInit {
       product_name: string= "";
       details: string="";
       size: string="";
-      color: number=0;
+      color: string="";
       costProduct:number=0;
       stock: number=0;
       filename = '';
@@ -33,8 +33,8 @@ export class FormProductComponent implements OnInit {
 
     fileData: File | undefined ;
     imageBase64:any="";
-      
-      product:Product= new Product(this.product_id,this.product_name, this.details, this.size, this.color, this.costProduct, this.stock, this.categoria_categoria_id, this.image); 
+
+      product:Product= new Product(this.product_id,this.product_name, this.details, this.size, this.color, this.costProduct, this.stock, this.categoria_categoria_id, this.image);
       // , this.imagen_id
       titulo:string="Registro de nuevo producto";
 
@@ -57,7 +57,7 @@ export class FormProductComponent implements OnInit {
       }
 
   //     create():void{
-    
+
   //     this.uploadFiles();
   // }
 
@@ -89,13 +89,13 @@ postMethod(event:any){
   reader.readAsDataURL(this.fileData);
   reader.onload = (_event) => {
     this.imageBase64 = reader.result;
-   
-    
-  
+
+
+
   };
 
-  
-  
+
+
 }
 
 
@@ -111,7 +111,7 @@ postMethod(event:any){
     }
     //this.uploadFiles();
   }
-  
+
   vista(index:number,file:File){
     const fr = new FileReader();
     fr.onload = (evento: any) => {
@@ -130,7 +130,7 @@ postMethod(event:any){
   //     }
   //   }
   // }
- 
+
 //   upload(index:number,file:File): void{
 
 //     this.productService.upload(file).subscribe(
@@ -142,11 +142,11 @@ postMethod(event:any){
 //         this.productService.create(this.product).subscribe(
 //           res=> this.router.navigate(['/products'])
 //         );
-  
-//        }   
+
+//        }
 //         console.log(data);
-       
-        
+
+
 //         console.log("IMAGEN DATA : ",data);
 //     },
 //     err=>{
