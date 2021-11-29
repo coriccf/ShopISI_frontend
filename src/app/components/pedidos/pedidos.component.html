@@ -2,18 +2,18 @@
 
     <div class="container text-white py-5 text-center">
       <h1 style="color: black;">Pedidos</h1>
-      
+
     </div>
-  
+
     <div class="pb-5">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 p-5 bg-white rounded shadow-sm mb-5">
-  
+
             <div class="table-responsive " style="font-size: 16px;">
-  
+
               <table class="table align-middle">
-  
+
                 <thead>
                   <tr>
                     <th scope="col" class="border-0 bg-dark">
@@ -28,11 +28,11 @@
                     <th scope="col" class="border-0 bg-dark">
                       <div class="py-2 text-uppercase" style="color: white;">Accion</div>
                     </th>
-              
+
                   </tr>
                 </thead>
-  
-  
+
+
                 <tbody *ngFor="let pedido of pedido">
                   <tr>
                     <th scope="row" class="border-0">
@@ -47,7 +47,7 @@
                       </div>
                     </th>
                     <td class="border-0 align-middle"><strong> {{pedido.cantidad}}</strong></td>
-                 
+
                       <td class="align-middle" *ngIf="pedido.order_status_status_id==1" style="color:#000000  "><strong>PENDIENTE</strong></td>
                       <td class="align-middle" *ngIf="pedido.order_status_status_id==2" style="color:#000000  "><strong>ACEPTADO</strong></td>
                       <td class="align-middle" *ngIf="pedido.order_status_status_id==3" style="color:#000000  "><strong>EN FABRICACION</strong></td>
@@ -57,13 +57,13 @@
 
 
                         <button *ngIf="pedido.order_status_status_id == 1" class="btn btn-success" style="margin: 10px" type="btnEdit" [routerLink]="['/catalogue/product-details',pedido.product_id]">Editar</button>
-                        
+
                         <td class="align-middle" *ngIf="pedido.order_status_status_id==2 " style="color:#000000  "><strong>------</strong></td>
                         <td class="align-middle" *ngIf="pedido.order_status_status_id==3 " style="color:#000000 "><strong>------</strong></td>
                         <td class="align-middle" *ngIf="pedido.order_status_status_id==4 " style="color:#000000  "><strong>------</strong></td>
                         <td class="align-middle" *ngIf="pedido.order_status_status_id==5 " style="color:#000000  "><strong>------</strong></td>
-                      
-                      <button *ngIf="pedido.order_status_status_id == 1" type="button" class="btn btn-danger" 
+
+                      <button *ngIf="pedido.order_status_status_id == 1" type="button" class="btn btn-danger"
                       mwlConfirmationPopover
                     [popoverTitle]="popoverTitle"
            [popoverMessage]="popoverMessage"
@@ -80,5 +80,4 @@
 
       </div>
     </div>
-  
-  
+

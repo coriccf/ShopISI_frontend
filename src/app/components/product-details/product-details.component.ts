@@ -18,9 +18,10 @@ export class ProductDetailsComponent implements OnInit {
   color: string="";
   quantity:number=0;
   costProduct:number=0;
+  imagenId:number[]=[];
   status: number= 0;
 
-  product:Product= new Product(this.product_id,this.product_name, this.details, this.size,this.stock, this.color,this.quantity, this.costProduct, this.status);
+ product:Product= new Product(this.product_id,this.product_name, this.details, this.size,this.stock, this.color,this.quantity, this.costProduct, this.status);
 
 
   constructor(private productService:ProductService, private router:Router, private activatedRoute:ActivatedRoute) { }

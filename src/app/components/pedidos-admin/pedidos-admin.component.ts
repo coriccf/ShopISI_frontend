@@ -17,26 +17,27 @@ export class PedidosAdminComponent implements OnInit {
   [x: string]: any;
 
 
-  
+
   order_id: number=0;
   user_id: number=0;
   order_status_status_id: number=0;
+  color: string="";
   cantidad: number=0;
   product_id: number=0;
 
   pedido!: Pedido[];
   products!: Product[];
   categoria: Array<Categoria>=[];
-  pedidos:Pedido= new Pedido(this.order_id, this.user_id, this.order_status_status_id, this.cantidad, this.product_id); 
+  pedidos:Pedido= new Pedido(this.order_id, this.user_id, this.order_status_status_id, this.color,this.cantidad, this.product_id);
 
 
   constructor(private activatedRoute:ActivatedRoute, private router:Router, private http: HttpClient, private pedidoService: PedidoService, private productService:ProductService, private categoriaService:CategoriaService) { }
 
-  
+
 
   ngOnInit(): void {
 
-     
+
     this.pedidoService.getAll().subscribe(
       pe => this.pedido = pe
     );
@@ -48,7 +49,7 @@ export class PedidosAdminComponent implements OnInit {
     this.categoriaService.getAll().subscribe(
       c => this.categoria=c
     );
-    
+
     this.http.get('http://localhost:8081/producto/id')
     .subscribe((data: any) => {
       this.products = data;
@@ -71,16 +72,16 @@ export class PedidosAdminComponent implements OnInit {
 
 
 
-  cargar(id:number, h:number):void{ 
+  cargar(id:number, h:number):void{
     this.pedidoService.get(id).subscribe(
-      
+
 
       es=> {this.pedidos=es;
         console.log(es);
         console.log(h ,'Imprimiendo h');
         this.update(h);
         }
-    
+
       );
   }
   // update(pedido:Pedido){
@@ -92,16 +93,16 @@ export class PedidosAdminComponent implements OnInit {
   //   );
   // }
   update(h:number):void{
-    this.pedidos= new Pedido(this.pedidos.order_id, this.pedidos.user_id, h, this.pedidos.cantidad, this.pedidos.product_id);
-   
+    this.pedidos= new Pedido(this.pedidos.order_id, this.pedidos.user_id,h, this.color, this.pedidos.cantidad, this.pedidos.product_id);
+
     this.pedidoService.update(this.pedidos).subscribe(
-      e=>{ 
+      e=>{
         this.router.navigate(['/pedidos-admin'])
         console.log(this.pedidos);
       }
-      
+
     )
- 
+
   }
   delete(pedido:Pedido):void{
     console.log("Delete");
@@ -110,7 +111,7 @@ export class PedidosAdminComponent implements OnInit {
         response=> this.pedido=response
       )
     );
-  
+
   }
 
   // create(pedido: Pedido){

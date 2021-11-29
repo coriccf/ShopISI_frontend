@@ -15,6 +15,7 @@ export class CartComponent implements OnInit {
   filterPost='';
 
   cart!: Cart[];
+  //cart: any[] = [];
   cartTotal: any[] = [];
   product: Array<Product> = [];
 

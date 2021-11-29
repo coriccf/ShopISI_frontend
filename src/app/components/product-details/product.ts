@@ -8,6 +8,7 @@ export class Product {
   color: string="";
   quantity: number=0;
   costProduct:number=0;
+  imagenId:number[]=[];
   status: number= 0;
 
   constructor(product_id:number,product_name:string,details:string,size:string,stock:number,color:string,quantity:number,costProduct:number,status:number){

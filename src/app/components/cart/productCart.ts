@@ -6,13 +6,14 @@ export class productCart{
   details: string="";
   size: string="";
   stock: number=0;
-  color: number=0;
+  color: string="";
   quantity: number=0;
   costProduct:number=0;
   status: number= 0;
   costo_total: number=0;
+  imagenId:number[]=[];
 
-  constructor(cart_id:number,product_id:number,product_name:string,details:string,size:string,stock:number,color:number,quantity:number,costProduct:number,status:number,costo_total: number){
+  constructor(cart_id:number,product_id:number,product_name:string,details:string,size:string,stock:number,color:string,quantity:number,costProduct:number,status:number,costo_total: number){
 
       this.cart_id=cart_id;
       this.product_id=product_id;
