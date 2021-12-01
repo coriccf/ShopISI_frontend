@@ -1,0 +1,108 @@
+<!--<div class="container">
+
+  <div class="abs-center">
+
+    <form class="border p-3 form row g-3 needs-validation" novalidate>
+
+      <div class=" py-5 text-center">
+        <h2 style="color: black;">Actualizar mi perfil de usuario</h2>
+      </div>
+
+      <div class="col-md-6 position-relative"><br><br>
+        <label for="inputCardname">Nombre</label>
+        <input type= "text" [(ngModel)]="user.name" class="form-control" id="inputNameuser" name="name"
+        ngModel  #name="ngModel"
+        [class.is-invalid]="name.invalid && name.touched"
+        minlength="3"
+        pattern=".*\S+.*"
+        required>
+        <small class="form-text text-danger" *ngIf="name.invalid && name.touched">El campo es obligatorio</small>
+      </div>
+
+      <div class="col-md-6 position-relative"><br><br>
+        <label for="inputLastname">Apellidos</label>
+        <input type="text" [(ngModel)]="user.lastname" class="form-control" id="inputLastname" name="lastname" ngModel #lastname="ngModel"
+        [class.is-invalid]="lastname.invalid && lastname.touched"
+        minlength="4"
+        pattern=".*\S+.*"
+        required >
+        <small class="form-text text-danger" *ngIf="lastname.invalid && lastname.touched">El campo es obligatorio</small>
+    </div>
+
+    <div class="col-md-6 position-relative">
+          <label for="inputTelephone">Teléfono</label>
+          <input type="text" [(ngModel)]="user.telephone" class="form-control" id="inputTelephone" name="telephone" ngModel #telephone="ngModel"
+          [class.is-invalid]="telephone.invalid && telephone.touched"
+          minlength="7"
+          pattern="^\+?\d{7,}"
+          required >
+      <small class="form-text text-danger" *ngIf="telephone.invalid && telephone.touched">Ingrese datos válidos</small>
+    </div>
+
+
+    <div class="col-md-6 position-relative">
+      <label for="inputCellephone">Celular</label>
+      <input type="text" [(ngModel)]="user.cellphone" class="form-control" id="inputCellphone" name="cellphone" ngModel #cellphone="ngModel"
+      [class.is-invalid]="cellphone.invalid && cellphone.touched"
+      minlength="7"
+      pattern="^\+?\d{7,}"
+      required >
+  <small class="form-text text-danger" *ngIf="cellphone.invalid && cellphone.touched">Ingrese datos válidos</small>
+    </div>
+
+
+    <div class="col-md-6 position-relative"><br><br>
+      <label for="inputEmail">Correo Electrónico</label>
+      <input type= "text" [(ngModel)]="user.email" class="form-control" id="inputEmail" name="email"
+      ngModel  #email="ngModel"
+      [class.is-invalid]="email.invalid && email.touched"
+      minlength="10"
+      pattern="@^[^@\s]+@[^@\s]+\.[^@\s]+$"
+      required>
+      <small class="form-text text-danger" *ngIf="email.invalid && email.touched">El campo es obligatorio</small>
+    </div>
+
+    <div class="col-md-6 position-relative"><br><br>
+      <label for="inputUsername">Nombre de Usuario</label>
+      <input type="text" [(ngModel)]="user.username" class="form-control" id="inputUsername" name="username" ngModel #username="ngModel"
+      [class.is-invalid]="username.invalid && username.touched"
+      minlength="4"
+      pattern=".*\S+.*"
+      required >
+      <small class="form-text text-danger" *ngIf="username.invalid && username.touched">El campo es obligatorio</small>
+  </div>
+
+  <div class="col-md-6 position-relative"><br><br>
+    <label for="inputPassword">Contraseña</label>
+    <input type="text" [(ngModel)]="user.password" class="form-control" id="inputPassword" name="password" ngModel #password="ngModel"
+    [class.is-invalid]="password.invalid && password.touched"
+    minlength="6"
+    pattern=".*\S+.*"
+    required >
+    <small class="form-text text-danger" *ngIf="password.invalid && password.touched">El campo es obligatorio</small>
+</div>
+
+
+
+
+  <br><br>
+
+
+  <div class="col-md-6 " class="text-center well">
+    <div class="position top-50 start-50">
+
+      <button class="btn btn-dark" style="margin: 10px" type="button" [routerLink]="['/card']">Atrás</button>
+
+      <button class="btn btn-success" style="margin: 10px" type="submit" role="button" (click)='create()'*ngIf="!user.user_id else elseBlock">Crear usuario</button>
+      <ng-template #elseBlock>
+        <button class="btn btn-success" style="margin: 10px" type="submit" role="button" (click)='update()'>Actualizar</button>
+      </ng-template>
+
+
+    </div>
+  </div>
+
+    </form>
+  </div>
+</div>
+-->

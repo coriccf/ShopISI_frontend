@@ -47,6 +47,8 @@ import { MoreOrderComponent } from './components/reports/more-order/more-order.c
 import { LessOrderComponent } from './components/reports/less-order/less-order.component';
 import { PedirComponent } from './components/pedir/pedir.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { AccountInfoComponent } from './components/account/account-info/account-info.component';
+import { AccountUpdateComponent } from './components/account/account-update/account-update.component';
 
 const routes: Routes = [
 
@@ -309,6 +311,18 @@ const routes: Routes = [
         component: LessOrderComponent
       },
 
+      { path: 'account-info',
+        component: AccountInfoComponent
+      },
+      { path: 'account-info/:id',
+        component: AccountInfoComponent
+      },
+      { path: 'account-update',
+        component: AccountUpdateComponent
+      },
+      { path: 'account-update/:id',
+        component: AccountUpdateComponent
+      },
 
 
 

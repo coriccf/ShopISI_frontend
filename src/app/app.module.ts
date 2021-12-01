@@ -51,9 +51,8 @@ import { LessOrderComponent } from './components/reports/less-order/less-order.c
 import { PedirComponent } from './components/pedir/pedir.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-
-
+import { AccountUpdateComponent } from './components/account/account-update/account-update.component';
+import { AccountInfoComponent } from './components/account/account-info/account-info.component';
 
 
 const routes: Routes = [
@@ -103,7 +102,10 @@ const routes: Routes = [
   { path: 'less-order', component: LessOrderComponent, pathMatch: 'full'},
   { path: 'pedir',component: PedirComponent, pathMatch:'full'},
   { path: 'pedir/:id', component: PedirComponent, pathMatch: 'full'},
-
+  { path: 'account-info', component: AccountInfoComponent, pathMatch:'full'},
+  { path: 'account-info/:id', component: AccountInfoComponent, pathMatch:'full'},
+  { path: 'account-update', component: AccountUpdateComponent, pathMatch: 'full'},
+  { path: 'account-update/:id', component: AccountUpdateComponent, pathMatch: 'full'},
 
 
 
@@ -155,7 +157,8 @@ const routes: Routes = [
     LessOrderComponent,
     PedirComponent,
     FooterComponent,
-
+    AccountUpdateComponent,
+    AccountInfoComponent,
 
 
   ],

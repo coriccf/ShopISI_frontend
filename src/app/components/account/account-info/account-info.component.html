@@ -1,0 +1,30 @@
+<div class="container" *ngFor="let user of user">
+
+  <div class="abs-center" >
+
+
+      <div class=" py-5 text-center">
+        <h2 style="color: black;">Perfil de Usuario</h2>
+      </div>
+
+   <div>
+        <h2 class="text"><strong>Nombres y Apellidos: </strong> {{ user.name}}  {{ user.lastname}} </h2>
+        <h2 class="text"><strong>Teléfono: </strong> {{ user.telephone}}   </h2>
+        <h2 class="text"><strong>Celular: </strong> {{ user.cellphone}}</h2>
+        <h2 class="text"><strong>Correo Electrónico: </strong>{{user.email }}</h2>
+        <h2 class="text"><strong>Nombre de Usuario: </strong> {{user.username}}</h2>
+        <h2 class="text"><strong>Contraseña: </strong>{{user.password }}</h2>
+      </div>
+
+
+  <div class="col-md-6 " class="text-center well">
+    <div class="position top-50 start-50">
+
+
+
+    </div>
+  </div>
+
+
+  </div>
+</div>
